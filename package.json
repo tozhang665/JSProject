@@ -1,0 +1,19 @@
+{
+  "name": "jsproject",
+  "version": "1.0.0",
+  "description": "## Background & Overview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tozhang665/JSProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tozhang665/JSProject/issues"
+  },
+  "homepage": "https://github.com/tozhang665/JSProject#readme"
+}
