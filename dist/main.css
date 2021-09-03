@@ -1,4 +1,29 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
 
+#site-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  height: 1000px;
+}
+
+#foods-container {
+  height: 1000px;
+  overflow: scroll;
+  background-color: blueviolet;
+}
+
+#bento-UI {
+  background-color: red;
+}
+
+#recipes {
+  background-color: saddlebrown;
+}
