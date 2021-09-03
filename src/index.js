@@ -20,8 +20,8 @@ containers.forEach(container =>{
     if(afterElement == null){
       container.appendChild(draggable);
     }else{
-      // container.insertBefore(draggable,afterElement);
-      container.appendChild(draggable);
+      container.insertBefore(draggable,afterElement.element);
+      // container.appendChild(draggable);
     }
   })
 })
@@ -32,14 +32,14 @@ function getDragAfterElement(container,y){
   return draggableElements.reduce((closest,child)=>{
     const box = child.getBoundingClientRect()
     const offset = y - box.top - box.height / 2
-    console.log(offset);
+    // console.log(offset);
     if(offset < 0 && offset > closest.offset){
       return {offset:offset,element:child}
     }else{
       return closest
       // return {offset:offset,element:child}
     }
-  },{offset:Number.NEGATIVE_INFINITY})
+  },{offset: Number.NEGATIVE_INFINITY})
 
 }
 
