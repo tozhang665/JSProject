@@ -9,7 +9,7 @@ their meal preps.
     a giant list of items
   2. This solution is slow and very tedious, which causes users to be discouraged 
     to meal prep
-  3. My website would allow users tomanually choose 
+  3. My website would allow users to manually choose which items to put inside the lunchbox
 
 ## Functionality & MVPs
 1. The basic functionality of my Website will have the layout of a lunch box on screeen.
