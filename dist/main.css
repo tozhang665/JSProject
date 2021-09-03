@@ -95,11 +95,11 @@ nav{
   justify-content: center;
   align-items: center;
 }
-#bento-box{
+/* #bento-box{
   height: auto;
   width:70%;
   opacity: 0.5;
-}
+} */
 
 #draggable{
   cursor: grab;
@@ -112,6 +112,23 @@ nav{
   background-color: white;
 }
 
+
+.draggable.dragging{
+  opacity: .5;
+}
+
+#bento-box{
+  /* display: block; */
+  background-image: url("../../dist/images/readMe/basicWireFrame.jpeg");
+  background-position: center;
+  background-size:cover;
+  width:500px;
+  height:500px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr;
+
+}
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (1) ***!
   \*****************************************************************************************************************************************/
