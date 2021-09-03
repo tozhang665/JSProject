@@ -19,11 +19,11 @@ their meal preps.
     - This is due to time constraints and creating drawings for every single food item will be out of scope.
 3. Everytime the user adds a item into my lunchbox, my website will show the macros(carb, protein, fats, total calories) on the side so it will let the user know the vital nutrition facts on the lunchbox they are making. 
 ## Wireframes
-![](MPrep/assets/images/readMe/wireframe.png)
-
+![](dist/images/readMe/wireframe.png)
 
 url:https://wireframe.cc/89414H
 
+![](dist/images/readMe/basicWireFrame.jpeg)
 ## Technologies
 1. HTML
 2. CSS
@@ -32,5 +32,5 @@ url:https://wireframe.cc/89414H
 5. Edamam API - https://developer.edamam.com/edamam-docs-nutrition-api
 6. RapidApi - https://rapidapi.com/spoonacular/api/recipe-food-nutrition/
 ## Implementation Timeline
-![](MPrep/assets/images/readMe/ganttChart.png)
+![](dist/images/readMe/ganttChart.png)
 
