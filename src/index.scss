@@ -1,26 +1,3 @@
-nav{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  background-color: aqua;
-}
-
-#site-container{
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  height: 1000px;
-}
-
-#foods-container{
-  height: 1000px;
-  overflow: scroll;
-  background-color: blueviolet;
-}
-
-#bento-UI{
-  background-color: red;
-}
-
-#recipes{
-  background-color: saddlebrown;
-}
+@import url("./styles/reset.css");
+@import url("./styles/current.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap")

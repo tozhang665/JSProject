@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./src/styles/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./dist/main.css">
-  <script src="./dist/main.js"></script>
+  <script src="./dist/main.js" defer></script>
   <title>Meal Prep</title>
 </head>
 <body>
@@ -15,8 +17,24 @@
   </nav>
   <div id = "site-container">
     <div id = "foods-container">
-      <div id = "foods-items">
-        <h1>Food1</h1>
+      <div id = "foods-items" class = "container">
+        <h1 class = "draggable" draggable="true">Food1</h1>
+        <br>
+        <h1 class = "draggable" draggable="true">Food2</h1>
+        <br>
+        <h1 class = "draggable" draggable="true">Food3</h1>
+        <br>
+        <h1 class = "draggable" draggable="true">Food4</h1>
+        <br>
+        <h1 class = "draggable" draggable="true">Food5</h1>
+        <br>
+        <h1 class = "draggable" draggable="true">Food6</h1>
+        <br>
+        <h1 class = "draggable" draggable="true">Food7</h1>
+        <br>
+        <h1 class = "draggable" draggable="true">Food8</h1>
+        <br>
+        <!-- <h1>Food1</h1>
         <br>
         <h1>Food2</h1>
         <br>
@@ -95,18 +113,30 @@
         <h1>Food1</h1>
         <br>
         <h1>Food2</h1>
-        <br>
-        <h1>Food1</h1>
-        <br>
-        <h1>Food2</h1>
-        <br>
+        <br> -->
 
       </div>
     </div>
 
-    <div id = "bento-UI">Bento UI</div>
+    <div id = "bento-UI">
+      <div id = "bento-header">
+        <p class="draggable" draggable="true">Hello</p>
+      </div>
 
-    <div id = "recipes">Recipes</div>
+      <div id ="lunchbox-bento">
+        <img src="./dist/images/readMe/basicWireFrame.jpeg" alt="" id = "bento-box">
+      </div>
+
+    </div>
+
+    <div id = "recipes">
+      <h1>Recipes</h1>
+      <br>
+      <br>
+      <div id = "containers" class="container">
+
+      </div>
+    </div>
 
 
   </div>

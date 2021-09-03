@@ -1,25 +1,60 @@
+h1{
+  font-family: 'Roboto', sans-serif;
+}
 nav{
   display:flex;
   justify-content: center;
   align-items: center;
-  background-color: aqua;
+  background-color: #B4A0E5;
+  height: 50px;
+  border-bottom: 1px solid #D5E2BC;
 }
 
 #site-container{
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
+  height: 1000px;
 }
 
 #foods-container{
-  height: 500px;
+  height: 1000px;
   overflow: scroll;
-  background-color: blueviolet;
+  background-color: #B4A0E5;
 }
 
 #bento-UI{
-  background-color: red;
+  background-color: #D5E2BC;
+  display:grid;
+  grid-template-rows: 20px 1fr;
+}
+#bento-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #recipes{
-  background-color: saddlebrown;
+  background-color: #306B34;
+}
+
+#lunchbox-bento{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+#bento-box{
+  height: auto;
+  width:70%;
+  opacity: 0.5;
+}
+
+#draggable{
+  cursor: grab;
+}
+
+#containers{
+  height: 100px;
+  width: auto;
+  border: 5px solid black;
+  background-color: white;
 }
