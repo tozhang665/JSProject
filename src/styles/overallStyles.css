@@ -1,0 +1,18 @@
+h1 ,#foods-header{
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+}
+
+
+
+#draggable{
+  cursor: grab;
+}
+
+
+
+.draggable.dragging{
+  opacity: .5;
+}
+
+

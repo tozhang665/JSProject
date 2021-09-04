@@ -1,3 +1,5 @@
+// const findFood = require("./scripts/script")
+
 const draggables = document.querySelectorAll(".draggable")
 const containers = document.querySelectorAll(".container")
 
@@ -42,6 +44,18 @@ function getDragAfterElement(container,y){
   },{offset: Number.NEGATIVE_INFINITY})
 
 }
+// function findFood(food){
+  // let url = "https://api.edamam.com/api/nutrition-data?app_id=4f9d03e6&app_key=dff8c743ccd80a3db6f55d96a39188a1&nutrition-type=logging&ingr="
+  //   url = url + food;
+  //   let nutrition = {};
+  //   fetch(url).then((res)=>res.json()).then((val)=>console.log(val.data));
+  //   // return nutrition;
+  // }
+  
+  
+let url ="https://api.edamam.com/api/nutrition-data?app_id=4f9d03e6&app_key=dff8c743ccd80a3db6f55d96a39188a1&nutrition-type=logging&ingr=chicken"
+fetch(url).then((response) => response.json()).then(data => console.log(data));
 
-
+// fetchText()
+// findFood("chicken")
 console.log("ITS WORKING");

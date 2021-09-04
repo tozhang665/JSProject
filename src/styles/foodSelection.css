@@ -1,0 +1,47 @@
+#foods-container{
+  /* height: 1000px;
+  overflow: scroll; */
+  background-color: #B4A0E5;
+}
+#foods-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#foods-items{
+  height: 1050px;
+  overflow: scroll;
+  display:flex;
+  justify-content: center;
+}
+
+.food{
+  height: 200px;
+  width: 200px;
+  background-position: center;
+  background-size:cover;
+  margin:10px;
+}
+
+.rice{
+  background-image: url("../../dist/food/onigilly.png");
+
+}
+
+.eggs{
+  background-image: url("../../dist/food/eggs.jpeg");
+
+}
+
+
+.hotdog{
+  background-image: url("../../dist/food/hotdog.png");
+}
+.chicken{
+  background-image: url("../../dist/food/chicken.png");
+}
+
+.generic{
+  background-image: url("../../dist/food/generic.png");
+}
