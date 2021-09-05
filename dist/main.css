@@ -55,9 +55,16 @@ nav{
   display:flex;
   justify-content: center;
   align-items: center;
-  background-color: #B4A0E5;
-  height: 50px;
+  /* background-color: #B4A0E5; */
+  background-color: #364156;
+  height: 60px;
   border-bottom: 1px solid #D5E2BC;
+  color: whitesmoke;
+}
+
+
+#title{
+  /* height:50px; */
 }
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/foodSelection.css ***!
@@ -81,8 +88,8 @@ nav{
 }
 
 .food{
-  height: 200px;
-  width: 200px;
+  height: 450px;
+  width: 300px;
   background-position: center;
   background-size:cover;
   margin:10px;
@@ -90,14 +97,11 @@ nav{
 
 .rice{
   background-image: url("../../dist/food/onigilly.png");
-
 }
 
 .eggs{
   background-image: url("../../dist/food/eggs.jpeg");
-
 }
-
 
 .hotdog{
   background-image: url("../../dist/food/hotdog.png");
@@ -144,6 +148,7 @@ nav{
 #bento-box{
   /* display: block; */
   /* background-image: url("../../dist/images/readMe/basicWireFrame.jpeg"); */
+  background-image: url("../../dist/images/otherImages/bentobox.png");
   background-position: center;
   background-size:cover;
   width:1000px;
@@ -157,6 +162,7 @@ nav{
 }
 
 #bento-box-inner{
+  /* background-image: url("../../dist/images/otherImages/bentobox.png"); */
   border: 5px solid black;
   height: 50%;
   width: 85%;
@@ -166,12 +172,15 @@ nav{
 
 #lSide{
   margin: 5px;
-  border: 5px solid aqua;
+  /* border: 5px solid aqua; */
   overflow: auto;
+  background-image: url(../../dist/food/generic.png);
+  background-position: center;
+  background-size:cover;
 }
 #rSide{
   margin: 5px;
-  border: 5px solid brown;
+  /* border: 5px solid brown; */
   overflow: auto;
 }
 

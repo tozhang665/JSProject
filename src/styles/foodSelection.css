@@ -17,8 +17,8 @@
 }
 
 .food{
-  height: 200px;
-  width: 200px;
+  height: 450px;
+  width: 300px;
   background-position: center;
   background-size:cover;
   margin:10px;
@@ -26,14 +26,11 @@
 
 .rice{
   background-image: url("../../dist/food/onigilly.png");
-
 }
 
 .eggs{
   background-image: url("../../dist/food/eggs.jpeg");
-
 }
-
 
 .hotdog{
   background-image: url("../../dist/food/hotdog.png");

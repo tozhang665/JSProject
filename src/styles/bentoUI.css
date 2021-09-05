@@ -30,6 +30,7 @@
 #bento-box{
   /* display: block; */
   /* background-image: url("../../dist/images/readMe/basicWireFrame.jpeg"); */
+  background-image: url("../../dist/images/otherImages/bentobox.png");
   background-position: center;
   background-size:cover;
   width:1000px;
@@ -43,6 +44,7 @@
 }
 
 #bento-box-inner{
+  /* background-image: url("../../dist/images/otherImages/bentobox.png"); */
   border: 5px solid black;
   height: 50%;
   width: 85%;
@@ -52,11 +54,14 @@
 
 #lSide{
   margin: 5px;
-  border: 5px solid aqua;
+  /* border: 5px solid aqua; */
   overflow: auto;
+  background-image: url(../../dist/food/generic.png);
+  background-position: center;
+  background-size:cover;
 }
 #rSide{
   margin: 5px;
-  border: 5px solid brown;
+  /* border: 5px solid brown; */
   overflow: auto;
 }
