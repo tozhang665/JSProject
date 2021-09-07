@@ -29,7 +29,8 @@
 }
 
 #eggs{
-  background-image: url("../../dist/food/eggs.jpeg");
+  /* background-image: url("../../dist/food/eggs.png") */
+  background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/egg_1f95a.png");
 }
 
 #hotdog{
