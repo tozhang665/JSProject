@@ -10,7 +10,7 @@
 }
 
 #foods-items{
-  height: 1050px;
+  height: 1224px;
   overflow: scroll;
   display:flex;
   justify-content: center;
@@ -24,21 +24,24 @@
   margin:10px;
 }
 
-.rice{
+#rice{
   background-image: url("../../dist/food/onigilly.png");
 }
 
-.eggs{
+#eggs{
   background-image: url("../../dist/food/eggs.jpeg");
 }
 
-.hotdog{
+#hotdog{
   background-image: url("../../dist/food/hotdog.png");
 }
-.chicken{
+#chicken{
   background-image: url("../../dist/food/chicken.png");
 }
 
-.generic{
+#lettuce{
+  background-image: url("../../dist/food/veggies.png");
+}
+#generic{
   background-image: url("../../dist/food/generic.png");
 }

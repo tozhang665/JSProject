@@ -9,7 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./dist/main.css">
   <link rel="shortcut icon" href="./dist/images/otherImages/favicon/favicon.ico" type="image/x-icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <script src="./dist/main.js" defer></script>
+  <script src="./src/index.js"></script>
   <title>My Bento Pal</title>
 </head>
 <body>
@@ -26,16 +30,16 @@
       </div>
       <div id = "foods-items" >
         <ul id = "foods-lists" class = "container">
-          <li class="draggable" draggable="true"><h1 class = "food rice"></h1></li>       
-          <li class="draggable" draggable="true"><h1 class="food eggs" ></h1></li>   
-          <li class="draggable" draggable="true"><h1 class="food hotdog" ></h1>
-          <li class="draggable" draggable="true"><h1 class="food chicken" ></h1></li>
-          <li class="draggable" draggable="true"><h1 class="food generic" ></h1></li>
-          <li class="draggable" draggable="true"><h1 class="food generic" ></h1></li>
-          <li class="draggable" draggable="true"><h1 class="food generic" ></h1></li>
-          <li class="draggable" draggable="true"><h1 class="food generic" ></h1></li>
-          <li class="draggable" draggable="true"><h1 class="food generic" ></h1></li>
-          <li class="draggable" draggable="true"><h1 class="food generic" ></h1></li>
+          <li class="draggable" draggable="true"><h1 class="food" id="rice"></h1></li>       
+          <li class="draggable" draggable="true"><h1 class="food" id="hotdog" ></h1></li>
+          <li class="draggable" draggable="true"><h1 class="food" id="chicken"></h1></li>
+          <li class="draggable" draggable="true"><h1 class="food" id="lettuce"></h1></li>
+          <li class="draggable" draggable="true"><h1 class="food" id="eggs"></h1></li>
+          <li class="draggable" draggable="true"><h1 class="food" id="generic"></h1></li>
+          <li class="draggable" draggable="true"><h1 class="food" id="generic"></h1></li>
+          <li class="draggable" draggable="true"><h1 class="food" id="generic"></h1></li>
+          <li class="draggable" draggable="true"><h1 class="food" id="generic"></h1></li>
+          <li class="draggable" draggable="true"><h1 class="food" id="generic"></h1></li>
         </ul>
       </div>
 
@@ -65,17 +69,95 @@
 
     </div>
 
-    <div id = "recipes">
-      <h1>Recipes</h1>
-      <br>
-      <br>
-      <div id = "containers" class="container">
+  </div>
 
-      </div>
+
+
+  <div id="nutrition-container">
+
+    <div id="nutr-left-side">
+      <h1>Foods Detected in Lunchbox</h1>
+    </div>  
+
+    <div id="nutr-right-side">
+      <canvas id="myCanvas"></canvas>
     </div>
 
+    <button onclick="getNutritionInfo()">Get</button>
 
   </div>
+  <script>
+  const labels = [
+    'Carbohydrates',
+    'Fats',
+    'Proteins',
+    'Calories'
+  ];
+
+  const data2 = {
+    labels: labels,
+    datasets: [{
+      label: "Nutriton Facts",
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [30,0,0,0]
+    }]
+  };
+
+  const config = {
+    type: 'bar',
+    data: data2,
+    options: {}
+  };
+
+  var myChart = new Chart(
+    document.getElementById('myCanvas'),
+    config
+  );
+
+  setInterval(function(){updateChart(myChart)},10000);
+  // setInterval(function(){
+  //   // let url = "https://api.edamam.com/api/food-database/v2/parser?app_id=81004352&app_key=4525ccc584ab8228a8038d8fddfa8b28&ingr=eggs%20and%20rice&nutrition-type=cooking"
+  //   fetch(url)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       let foodCont = document.getElementById("nutr-left-side")
+  //       foodCont.innerHTML = "";
+  //       let parsedData = data["parsed"]
+  //       let extracted = []
+  //       let carbs = 0;
+  //       let fats = 0;
+  //       let protein = 0;
+  //       let calories = 0;
+
+
+  //       parsedData.forEach((ele) => {
+  //         let arr = [];
+  //         // arr.push(ele["food"]["label"]);
+
+  //         let food = document.createElement("h3")
+  //         food.innerText = ele["food"]["label"];
+  //         // detectedFoods.push(ele["food"]["label"]);
+  //         foodCont.appendChild(food);
+
+  //         arr.push(ele["food"]["nutrients"])
+  //         extracted.push(arr)
+
+
+  //         carbs = carbs + ele["food"]["nutrients"]["CHOCDF"];
+  //         fats = fats + ele["food"]["nutrients"]["FAT"];
+  //         protein = protein + ele["food"]["nutrients"]["PROCNT"];
+  //         calories = calories + ele["food"]["nutrients"]["ENERC_KCAL"];
+  //       })
+  //       console.log(myChart);
+  //       console.log(myChart["data"]["datasets"]["0"]["data"]);
+  //       myChart["data"]["datasets"]["0"]["data"] = [carbs, fats, protein, calories];
+  //       // console.log(myChart.data.datasets.data);
+  //       myChart.update();
+  //     })
+    
+  // },10000);
+  </script>
 
 </body>
 </html>
