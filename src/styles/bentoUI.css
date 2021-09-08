@@ -1,12 +1,14 @@
 
 #bento-UI{
   /* background-color: #D5E2BC; */
-  /* background-color: #D0DDD7; */
-  background-color: black;
+  background-color: #9893DA;
+  /* background-color: black; */
   display:grid;
   grid-template-rows: 20px 1fr;
   border-radius: 20px;
-  margin:2%
+  margin:2%;
+  margin-top:10%;
+  margin-bottom: 10%;
 
 }
 #bento-header{

@@ -18,15 +18,20 @@
 </head>
 <body>
   <nav>
-    <h1 id = "title">My Bento Pal</h1>
+    <h1 id = "title"><a href="https://fontmeme.com/fruit-ninja-font/"><img
+        src="https://fontmeme.com/permalink/210908/358cb90cfe8ca86bd913599a69de8207.png" alt="fruit-ninja-font"></a>
+    </h1>
   </nav>
+
   <div id = "site-container">
 
 
 
     <div id = "foods-container">
-      <input type="text" id="food-input">
-      <button onclick="addItem()">Add Item</button>
+      <div id="searchTerms">
+        <input type="text" id="food-input">
+        <button onclick="addItem()">Add Item</button>
+      </div>
       <div id = "foods-header">
         All Foods
       </div>
@@ -97,9 +102,12 @@
     </div>
 
     <div id="nutr-right-side">
-      <div id="chart-container">
-        <canvas id="myCanvas"></canvas>
+      <div id="chart-center">
+        <div id="chart-container">
+          <canvas id="myCanvas"></canvas>
+        </div>
       </div>
+      
       
 
       <h1>Foods Detected in Lunchbox</h1>

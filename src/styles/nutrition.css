@@ -5,16 +5,26 @@
 
 #nutr-right-side{
   /* background-color: #306B34; */
-  background-color: black;
+  background-color: #625F63;
   width: 500px;
-  height: 1000px;
+  height: 700px;
   margin:5%;
+  margin-top: 40%;
   border-radius: 20px;
 }
 
+#chart-center{
+  display: flex;
+  justify-content: center;
+}
+
 #chart-container{
-  width: 400px;
+  width: 450px;
   height: auto;
+  background-color: white;
+  margin-top:20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
 }
 
 #serving-size{

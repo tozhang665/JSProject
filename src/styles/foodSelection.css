@@ -1,13 +1,18 @@
+#searchTerms{
+  margin-top: 15px;
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
 #foods-container{
   /* height: 1000px;
   overflow: scroll; */
   /* background-color: #B4A0E5; */
-  /* background-color: #D0DDD7; */
-  background-color: black;
+  background-color: #9893DA;
+  /* background-color: black; */
   margin:5%;
   margin-left:7%;
   border-radius: 20px;
-
+ 
 }
 #foods-header{
   display: flex;
@@ -45,24 +50,8 @@
   background-size: cover;
   margin:5px;
   border: 2px solid black;
-
+  border-radius: 10px;
 }
-
-/* #rightside-main > div > ul > .food{
-
-  height:200px;
-  width: 200px;
-  background-position: center;
-  background-size: cover;
-  margin:5px;
-  border: 2px solid black;
-
-}
- */
-
-/* .foods-list >li>h1{
-  background-image: url("../../dist/food/StockPics/cannedFood.png");
-} */
 
 .food{
   background-image: url("../../dist/food/StockPics/cannedFood.png");
@@ -72,7 +61,6 @@
 }
 
 #eggs{
-  /* background-image: url("../../dist/food/eggs.png") */
   background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/egg_1f95a.png");
 }
 
