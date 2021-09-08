@@ -10,20 +10,55 @@
 }
 
 #foods-items{
-  height: 1224px;
+  height: 1000px;
   overflow: scroll;
-  display:flex;
-  justify-content: center;
+  /* display:flex; */
+  /* justify-content: center; */
+}
+#foods-lists{
+  display:grid;
+  grid-template-columns:1fr 1fr;
 }
 
 .food{
-  height: 450px;
-  width: 300px;
   background-position: center;
-  background-size:cover;
-  margin:10px;
+  background-size: cover;
+  height: 200px;
+  width: 200px;
 }
 
+#foods-lists >li> .food{
+  /* height: 450px;
+  width: 300px; */
+  height:200px;
+  width: 200px;
+  background-position: center;
+  /* background-size:450px 300px; */
+  background-size: cover;
+  margin:5px;
+  border: 2px solid black;
+
+}
+
+/* #rightside-main > div > ul > .food{
+
+  height:200px;
+  width: 200px;
+  background-position: center;
+  background-size: cover;
+  margin:5px;
+  border: 2px solid black;
+
+}
+ */
+
+/* .foods-list >li>h1{
+  background-image: url("../../dist/food/StockPics/cannedFood.png");
+} */
+
+.food{
+  background-image: url("../../dist/food/StockPics/cannedFood.png");
+}
 #rice{
   background-image: url("../../dist/food/onigilly.png");
 }
@@ -39,10 +74,9 @@
 #chicken{
   background-image: url("../../dist/food/chicken.png");
 }
-
 #lettuce{
   background-image: url("../../dist/food/veggies.png");
 }
-#generic{
+/* #generic{
   background-image: url("../../dist/food/generic.png");
-}
+} */

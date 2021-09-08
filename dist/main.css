@@ -81,20 +81,55 @@ nav{
 }
 
 #foods-items{
-  height: 1224px;
+  height: 1000px;
   overflow: scroll;
-  display:flex;
-  justify-content: center;
+  /* display:flex; */
+  /* justify-content: center; */
+}
+#foods-lists{
+  display:grid;
+  grid-template-columns:1fr 1fr;
 }
 
 .food{
-  height: 450px;
-  width: 300px;
   background-position: center;
-  background-size:cover;
-  margin:10px;
+  background-size: cover;
+  height: 200px;
+  width: 200px;
 }
 
+#foods-lists >li> .food{
+  /* height: 450px;
+  width: 300px; */
+  height:200px;
+  width: 200px;
+  background-position: center;
+  /* background-size:450px 300px; */
+  background-size: cover;
+  margin:5px;
+  border: 2px solid black;
+
+}
+
+/* #rightside-main > div > ul > .food{
+
+  height:200px;
+  width: 200px;
+  background-position: center;
+  background-size: cover;
+  margin:5px;
+  border: 2px solid black;
+
+}
+ */
+
+/* .foods-list >li>h1{
+  background-image: url("../../dist/food/StockPics/cannedFood.png");
+} */
+
+.food{
+  background-image: url("../../dist/food/StockPics/cannedFood.png");
+}
 #rice{
   background-image: url("../../dist/food/onigilly.png");
 }
@@ -110,13 +145,12 @@ nav{
 #chicken{
   background-image: url("../../dist/food/chicken.png");
 }
-
 #lettuce{
   background-image: url("../../dist/food/veggies.png");
 }
-#generic{
+/* #generic{
   background-image: url("../../dist/food/generic.png");
-}
+} */
 /*!******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/bentoUI.css ***!
   \******************************************************************************************************/
@@ -173,19 +207,49 @@ nav{
   display: grid;
   grid-template-columns: 45fr 55fr;
 }
+/* 
+#leftSide-main{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+} */
 
-#lSide{
-  margin: 5px;
-  /* border: 5px solid aqua; */
-  overflow: auto;
-  background-image: url(../../dist/food/generic.png);
+#lSide-1, #lSide-2{
+  height: 50%;
+  background-image: url("../../dist/food/generic.png");
   background-position: center;
   background-size:cover;
+  overflow: hidden;
 }
-#rSide{
-  margin: 5px;
+
+#rSide-1,#rSide-2,#rSide-3,#rSide-4{
+  height: 100%;
+  background-image: url("../../dist/food/generic.png");
+  background-position: center;
+  background-size:cover;
+  overflow: hidden;
+}
+
+#rightside-main{
+  /* margin: 5px; */
   /* border: 5px solid brown; */
   overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+
+#leftSide-1, #leftSide-2,#rightSide-1,#rightSide-2,#rightSide-3,#rightSide-4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+ul{
+  height: 100%;
 }
 
 /*!********************************************************************************************************!*\
@@ -207,6 +271,10 @@ nav{
   height: 1000px;
 }
 
+#chart-container{
+  width: 400px;
+  height: auto;
+}
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/overallStyles.css ***!
   \************************************************************************************************************/
@@ -235,7 +303,7 @@ h1 ,#foods-header{
 #site-container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  height: 1250px;
+  height: 1000px;
 }
 
 @media only screen and (max-width: 600px) {

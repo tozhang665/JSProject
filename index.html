@@ -25,21 +25,18 @@
 
 
     <div id = "foods-container">
+      <input type="text" id="food-input">
+      <button onclick="addItem()">Add Item</button>
       <div id = "foods-header">
         All Foods
       </div>
       <div id = "foods-items" >
-        <ul id = "foods-lists" class = "container">
-          <li class="draggable" draggable="true"><h1 class="food" id="rice"></h1></li>       
-          <li class="draggable" draggable="true"><h1 class="food" id="hotdog" ></h1></li>
-          <li class="draggable" draggable="true"><h1 class="food" id="chicken"></h1></li>
-          <li class="draggable" draggable="true"><h1 class="food" id="lettuce"></h1></li>
-          <li class="draggable" draggable="true"><h1 class="food" id="eggs"></h1></li>
-          <li class="draggable" draggable="true"><h1 class="food" id="generic"></h1></li>
-          <li class="draggable" draggable="true"><h1 class="food" id="generic"></h1></li>
-          <li class="draggable" draggable="true"><h1 class="food" id="generic"></h1></li>
-          <li class="draggable" draggable="true"><h1 class="food" id="generic"></h1></li>
-          <li class="draggable" draggable="true"><h1 class="food" id="generic"></h1></li>
+        <ul id = "foods-lists" class = "container foods-list">
+          <li class="draggable" draggable="true"><h1 class="food" id="rice"></h1><p>rice</p></li>       
+          <li class="draggable" draggable="true"><h1 class="food" id="hotdog" ></h1><p>hot dog</p></li>
+          <li class="draggable" draggable="true"><h1 class="food" id="chicken"></h1><p> chicken</p></li>
+          <li class="draggable" draggable="true"><h1 class="food" id="lettuce"></h1><p>lettuce</p></li>
+          <li class="draggable" draggable="true"><h1 class="food" id="eggs"></h1><p>eggs</p></li>
         </ul>
       </div>
 
@@ -51,68 +48,90 @@
       </div>
 
       <div id ="lunchbox-bento">
-        <!-- <img src="./dist/images/otherImages/bentobox.png" alt="" id = "bento-box"> -->
-        <div id = "bento-box">
-          <div id = "bento-box-inner">
-            
-            <ul id="lSide" class="container">
-              
-            </ul>
-
-            <ul id="rSide" class="container">
-              
-            </ul>
-          </div>
         
+        <div id = "bento-box">
+
+          <div id = "bento-box-inner">
+            <div id = "leftSide-main">
+              <div id="lSide-1">
+                <ul id="leftSide-1" class="container">
+
+                </ul>
+              </div>
+              <div id="lSide-2">
+                <ul id="leftSide-2" class="container">
+
+                </ul>
+              </div>
+            </div>
+
+            <div id= "rightside-main">
+              <div id="rSide-1">
+                <ul id="rightSide-1" class="container">
+              
+                </ul>
+              </div>
+              <div id="rSide-2">
+                <ul id="rightSide-2" class="container">
+                
+                </ul>
+              </div>
+              <div id="rSide-3">
+                <ul id="rightSide-3" class="container">
+
+                </ul>
+              </div>
+              <div id="rSide-4">
+                <ul id="rightSide-4" class="container">
+
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+
         </div>
       </div>
 
     </div>
 
     <div id="nutr-right-side">
-      <canvas id="myCanvas"></canvas>
-
-      <div id="nutr-left-side">
-        <h1>Foods Detected in Lunchbox</h1>
-        <!-- <p> &#xude06</p> -->
+      <div id="chart-container">
+        <canvas id="myCanvas"></canvas>
       </div>
-    
+      
+
+      <h1>Foods Detected in Lunchbox</h1>
+      <div id="nutrition-container">
+        <div id="picked-foods">
+            picked
+        </div>
+        <div id="serving-size">
+          serving
+        </div>
+      </div>
+      
+      
     </div>
 
-    
-
-
+  
   </div>
-
-
-
-  <!-- <div id="nutrition-container">
-
-    <div id="nutr-left-side">
-      <h1>Foods Detected in Lunchbox</h1>
-    </div>  
-
-    
-    <button onclick="getNutritionInfo()">Get</button>
-
-  </div> -->
-
 
   <script>
   const labels = [
-    'Carbohydrates',
-    'Fats',
-    'Proteins',
-    'Calories'
+    'Carbohydrates (g)',
+    'Fats (g)',
+    'Proteins (g)'
   ];
-
+  
   const data2 = {
     labels: labels,
     datasets: [{
-      label: "Nutriton Facts",
+      label: `Total Calories: 0`,
       backgroundColor: 'rgb(255, 99, 132)',
       borderColor: 'rgb(255, 99, 132)',
-      data: [0,0,0,0]
+      data: [0,0,0]
     }]
   };
 
@@ -128,47 +147,6 @@
   );
 
   setInterval(function(){updateChart(myChart)},10000);
-  // setInterval(function(){
-  //   // let url = "https://api.edamam.com/api/food-database/v2/parser?app_id=81004352&app_key=4525ccc584ab8228a8038d8fddfa8b28&ingr=eggs%20and%20rice&nutrition-type=cooking"
-  //   fetch(url)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       let foodCont = document.getElementById("nutr-left-side")
-  //       foodCont.innerHTML = "";
-  //       let parsedData = data["parsed"]
-  //       let extracted = []
-  //       let carbs = 0;
-  //       let fats = 0;
-  //       let protein = 0;
-  //       let calories = 0;
-
-
-  //       parsedData.forEach((ele) => {
-  //         let arr = [];
-  //         // arr.push(ele["food"]["label"]);
-
-  //         let food = document.createElement("h3")
-  //         food.innerText = ele["food"]["label"];
-  //         // detectedFoods.push(ele["food"]["label"]);
-  //         foodCont.appendChild(food);
-
-  //         arr.push(ele["food"]["nutrients"])
-  //         extracted.push(arr)
-
-
-  //         carbs = carbs + ele["food"]["nutrients"]["CHOCDF"];
-  //         fats = fats + ele["food"]["nutrients"]["FAT"];
-  //         protein = protein + ele["food"]["nutrients"]["PROCNT"];
-  //         calories = calories + ele["food"]["nutrients"]["ENERC_KCAL"];
-  //       })
-  //       console.log(myChart);
-  //       console.log(myChart["data"]["datasets"]["0"]["data"]);
-  //       myChart["data"]["datasets"]["0"]["data"] = [carbs, fats, protein, calories];
-  //       // console.log(myChart.data.datasets.data);
-  //       myChart.update();
-  //     })
-    
-  // },10000);
   </script>
 
 </body>

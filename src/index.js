@@ -122,8 +122,10 @@ function getNutritionInfo(){
     });
 }
 
-function grabFoods(){
-  var children = [].slice.call(document.getElementById('lSide').getElementsByTagName('*'),0);
+
+function grabDivFoods(elementID){
+  var terms = [];
+  var children = [].slice.call(document.getElementById(elementID).getElementsByTagName('*'),0);
 
   var elements = new Array(children.length);
   var arrayLength = children.length;
@@ -131,17 +133,24 @@ function grabFoods(){
     var name = children[i].getAttribute("id");   
     elements[i]=name;
   }
-
-  var terms = [];
+  
   elements.forEach((ele,idx)=>{
     if(idx%2 ===1){
       terms.push(ele)
     }
   })
+  return terms;
+}
+function grabFoods(){
 
-  // console.log(elements.join(" "))
-  // console.log(terms)
 
+  terms = grabDivFoods('leftSide-1');
+  terms = terms.concat(grabDivFoods('leftSide-2'));
+  terms = terms.concat(grabDivFoods('rightSide-1'));
+  terms = terms.concat(grabDivFoods('rightSide-2'));
+  terms = terms.concat(grabDivFoods('rightSide-3'));
+  terms = terms.concat(grabDivFoods('rightSide-4'));
+  console.log(terms)
   return terms.join("%20and%20");
 }
 
@@ -149,12 +158,15 @@ function updateChart(myChart){
   let url = "https://api.edamam.com/api/food-database/v2/parser?app_id=81004352&app_key=4525ccc584ab8228a8038d8fddfa8b28&ingr="
   let terms = grabFoods();
   url = url+ terms + "&nutrition-type=cooking"
+  // let url2="https://api.edamam.com/api/food-database/v2/parser?app_id=81004352&app_key=4525ccc584ab8228a8038d8fddfa8b28&ingr=bacon&nutrition-type=cooking"
   fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        let foodCont = document.getElementById("nutr-left-side")
+        let foodCont = document.getElementById("picked-foods")
         foodCont.innerHTML = "";
+        // console.log(data)
         let parsedData = data["parsed"]
+        // console.log(parsedData)
         let extracted = []
         let carbs = 0;
         let fats = 0;
@@ -163,6 +175,14 @@ function updateChart(myChart){
 
 
         parsedData.forEach((ele) => {
+          // console.log(ele);
+          let weight = 1;
+          console.log(ele)
+          if(ele["food"]["servingsPerContainer"]){
+            weight = ele["food"]["servingsPerContainer"];
+          }
+          console.log(weight);
+          // console.log(weight);
           let arr = [];
           // arr.push(ele["food"]["label"]);
 
@@ -174,15 +194,15 @@ function updateChart(myChart){
           arr.push(ele["food"]["nutrients"])
           extracted.push(arr)
 
-
-          carbs = carbs + ele["food"]["nutrients"]["CHOCDF"];
-          fats = fats + ele["food"]["nutrients"]["FAT"];
-          protein = protein + ele["food"]["nutrients"]["PROCNT"];
-          calories = calories + ele["food"]["nutrients"]["ENERC_KCAL"];
+          carbs = carbs + (ele["food"]["nutrients"]["CHOCDF"]/weight);
+          fats = fats + (ele["food"]["nutrients"]["FAT"]/weight);
+          protein = protein + (ele["food"]["nutrients"]["PROCNT"]/weight);
+          calories = calories + (ele["food"]["nutrients"]["ENERC_KCAL"]/weight);
         })
-        console.log(myChart);
-        console.log(myChart["data"]["datasets"]["0"]["data"]);
-        myChart["data"]["datasets"]["0"]["data"] = [carbs, fats, protein, calories];
+        // console.log(myChart);
+        // console.log(myChart["data"]["datasets"]["0"]["data"]);
+        myChart["data"]["datasets"]["0"]["label"] = `Total Calories: ${calories}`
+        myChart["data"]["datasets"]["0"]["data"] = [carbs, fats, protein];
         // console.log(myChart.data.datasets.data);
         myChart.update();
       })
@@ -190,4 +210,39 @@ function updateChart(myChart){
 }
 
 
+function addItem(){
+  let food = document.getElementById("food-input").value
+  console.log(food)
+
+
+
+  let url = "https://api.edamam.com/api/food-database/v2/parser?app_id=81004352&app_key=4525ccc584ab8228a8038d8fddfa8b28&ingr="
+  url = url+ food + "&nutrition-type=cooking"
+
+  fetch(url)
+  .then((res)=>res.json())
+  .then((data)=>{
+    if(data["parsed"].length !== 0){
+
+
+
+      let cont = document.getElementById("foods-lists");
+      let newFood = document.createElement("li");
+      newFood.setAttribute("class","draggable");
+      newFood.setAttribute("draggable","true");
+      newFood.innerHTML=`<h1 class="food" id="${food}"></h1><p>${food}</p>`;
+      // newFood.style.backgroundimage="url('../../dist/food/StockPics/cannedFood.png')"
+      console.log(newFood);
+      cont.insertBefore(newFood,cont.firstChild)
+      // cont.appendChild(newFood);
+      console.log(cont);
+      newFood.addEventListener('dragstart',()=>{
+        newFood.classList.add('dragging');
+      })
+      newFood.addEventListener('dragend',()=>{
+        newFood.classList.remove('dragging');
+      })
+    }
+  })
+}
 
