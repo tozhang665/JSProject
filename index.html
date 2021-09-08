@@ -104,11 +104,13 @@
 
       <h1>Foods Detected in Lunchbox</h1>
       <div id="nutrition-container">
+        <h2>Food Item</h2>
+        <h2>Amount in Grams</h2>
         <div id="picked-foods">
-            picked
+          
         </div>
         <div id="serving-size">
-          serving
+        
         </div>
       </div>
       
@@ -146,7 +148,11 @@
     config
   );
 
-  setInterval(function(){updateChart(myChart)},10000);
+  setInterval(function(){
+    updatePicked();
+    parseServings(myChart);
+    console.log("GRABBED");
+  },10000);
   </script>
 
 </body>
