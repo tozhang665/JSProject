@@ -65,11 +65,6 @@ nav{
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/foodSelection.css ***!
   \************************************************************************************************************/
-#searchTerms{
-  margin-top: 15px;
-  margin-left: 30px;
-  margin-bottom: 15px;
-}
 #foods-container{
   /* height: 1000px;
   overflow: scroll; */
@@ -77,10 +72,16 @@ nav{
   background-color: #9893DA;
   /* background-color: black; */
   margin:5%;
-  margin-left:7%;
+  margin-left:20%;
   border-radius: 20px;
- 
+  
 }
+#searchTerms{
+  margin-top: 15px;
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
 #foods-header{
   display: flex;
   justify-content: center;
@@ -151,13 +152,14 @@ nav{
   /* background-color: #D5E2BC; */
   background-color: #9893DA;
   /* background-color: black; */
+  height: 50%;
   display:grid;
-  grid-template-rows: 20px 1fr;
+  grid-template-rows: 20px 600px;
   border-radius: 20px;
-  margin:2%;
-  margin-top:10%;
+  margin:5%;
+  margin-top:20%;
   margin-bottom: 10%;
-
+  width: 1100px;
 }
 #bento-header{
   display: flex;
