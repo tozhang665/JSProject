@@ -24,11 +24,12 @@ containers.forEach(container =>{
       container.appendChild(draggable);
     }else{
       container.insertBefore(draggable,afterElement.element);
-      // container.appendChild(draggable);
     }
-    // getNutritionInfo();
+
   })
+
 })
+
 
 function getDragAfterElement(container,y){
   const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging')]
@@ -46,82 +47,6 @@ function getDragAfterElement(container,y){
   },{offset: Number.NEGATIVE_INFINITY})
 
 }
-
-function getNutritionInfo(){
-  let rSide = document.getElementById("nutr-right-side")
-  let canv = document.getElementById("myCanvas");
-  canv.parentNode.removeChild(canv);
-
-  let newCanv = document.createElement("canvas")
-  newCanv.id = "myCanvas"
-  rSide.appendChild(newCanv);
-    let url2 = "https://api.edamam.com/api/food-database/v2/parser?app_id=81004352&app_key=4525ccc584ab8228a8038d8fddfa8b28&ingr=eggs%20and%20rice&nutrition-type=cooking"
-    // let url ="https://api.edamam.com/api/nutrition-data?app_id=4f9d03e6&app_key=dff8c743ccd80a3db6f55d96a39188a1&nutrition-type=logging&ingr=chicken"
-    fetch(url2)
-      .then((response) => response.json())
-      .then(data => {
-        let foodCont = document.getElementById("nutr-left-side")
-
-        let parsedData = data["parsed"]
-        let extracted =[]
-        let carbs = 0;
-        let fats = 0;
-        let protein = 0;
-        let calories = 0;
-
-
-        parsedData.forEach((ele)=>{
-          let arr = [];
-          // arr.push(ele["food"]["label"]);
-
-          let food = document.createElement("h3")
-          food.innerText = ele["food"]["label"];
-          // detectedFoods.push(ele["food"]["label"]);
-          foodCont.appendChild(food);
-
-          arr.push(ele["food"]["nutrients"])
-          extracted.push(arr)
-
-
-          carbs = carbs + ele["food"]["nutrients"]["CHOCDF"];
-          fats = fats + ele["food"]["nutrients"]["FAT"];
-          protein = protein + ele["food"]["nutrients"]["PROCNT"];
-          calories = calories + ele["food"]["nutrients"]["ENERC_KCAL"];
-          
-        })
-
-
-        const labels =[
-          'Carbohydrates',
-          'Fats',
-          'Proteins',
-          'Calories'
-        ];
-
-        const data2 ={
-          labels:labels,
-          datasets:[{
-            label:"Nutriton Facts",
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [carbs,fats,protein,calories],
-          }]
-        };
-
-        const config={
-          type:'bar',
-          data:data2,
-          options:{}
-        };
-
-        var myChart = new Chart(
-          document.getElementById('myCanvas'),
-          config
-        );
-        console.log(extracted)
-    });
-}
-
 
 function grabDivFoods(elementID){
   var terms = [];
@@ -152,55 +77,6 @@ function grabFoods(){
   terms = terms.concat(grabDivFoods('rightSide-4'));
   // console.log(terms)
   return terms.join("%20and%20");
-}
-
-function updateChart(myChart){
-  let url = "https://api.edamam.com/api/food-database/v2/parser?app_id=81004352&app_key=4525ccc584ab8228a8038d8fddfa8b28&ingr="
-  let terms = grabFoods();
-  url = url+ terms + "&nutrition-type=cooking"
-  // let url2="https://api.edamam.com/api/food-database/v2/parser?app_id=81004352&app_key=4525ccc584ab8228a8038d8fddfa8b28&ingr=bacon&nutrition-type=cooking"
-  fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        let foodCont = document.getElementById("picked-foods")
-        foodCont.innerHTML = "";
-        console.log(data)
-        let parsedData = data["parsed"]
-        let carbs = 0;
-        let fats = 0;
-        let protein = 0;
-        let calories = 0;
-
-
-        parsedData.forEach((ele) => {
-
-          let weight = 1;
-
-          if(ele["food"]["servingsPerContainer"]){
-            weight = ele["food"]["servingsPerContainer"];
-          }
-
-          // console.log(weight);
-          let arr = [];
-
-          let food = document.createElement("h3")
-          food.innerText = ele["food"]["label"];
-          foodCont.appendChild(food);
-
-          arr.push(ele["food"]["nutrients"])
-
-          carbs = carbs + (ele["food"]["nutrients"]["CHOCDF"]/weight);
-          fats = fats + (ele["food"]["nutrients"]["FAT"]/weight);
-          protein = protein + (ele["food"]["nutrients"]["PROCNT"]/weight);
-          calories = calories + (ele["food"]["nutrients"]["ENERC_KCAL"]/weight);
-        })
-        // console.log(myChart);
-        // console.log(myChart["data"]["datasets"]["0"]["data"]);
-        myChart["data"]["datasets"]["0"]["label"] = `Total Calories: ${calories}`
-        myChart["data"]["datasets"]["0"]["data"] = [carbs, fats, protein];
-        // console.log(myChart.data.datasets.data);
-        myChart.update();
-      })
 }
 
 
@@ -291,14 +167,15 @@ function updatePicked(){
   })
 }
 
-
 async function getFoodAsync(name) 
 {
-  let response = await fetch(`https://api.edamam.com/api/food-database/v2/parser?app_id=81004352&app_key=4525ccc584ab8228a8038d8fddfa8b28&ingr=${name}&nutrition-type=cooking`);
-  let data = await response.json()
+  const response = await fetch(`https://api.edamam.com/api/food-database/v2/parser?app_id=81004352&app_key=4525ccc584ab8228a8038d8fddfa8b28&ingr=${name}&nutrition-type=cooking`);
+  if(!response.ok){
+    throw new Error('Network response was not ok');
+  }
+  const data = await response.json()
   return data;
 }
-
 
 
 
@@ -323,27 +200,25 @@ function parseServings(myChart){
     allFoods[i]=name;
   }
 
-  // console.log(allFoods);
-  // console.log(allServings);
 
   let carbs = 0;
   let fats = 0;
   let protein = 0;
   let calories = 0;
 
-  allFoods.forEach((foodItem,idx)=>{
-    let url = "https://api.edamam.com/api/food-database/v2/parser?app_id=81004352&app_key=4525ccc584ab8228a8038d8fddfa8b28&ingr="
-    url = url+ foodItem+ "&nutrition-type=cooking";
+  let strAllFoods = allFoods.join("%20")
 
-    // fetch(url)
-    //   .then((res)=> res.json())
-    getFoodAsync(foodItem)
-      .then((data)=>{
-        // console.log(data);
-        let grabbedCal = data["parsed"]["0"]["food"]["nutrients"]["ENERC_KCAL"];
-        let grabbedCarb = data["parsed"]["0"]["food"]["nutrients"]["CHOCDF"];
-        let grabbedProt = data["parsed"]["0"]["food"]["nutrients"]["PROCNT"];
-        let grabbedFat = data["parsed"]["0"]["food"]["nutrients"]["FAT"];
+
+  getFoodAsync(strAllFoods)
+    .then((data)=>{
+      // console.log("FETCHING")
+      let foodItems = data["parsed"];
+
+      foodItems.forEach((ele,idx)=>{
+        let grabbedCal = ele["food"]["nutrients"]["ENERC_KCAL"];
+        let grabbedCarb = ele["food"]["nutrients"]["CHOCDF"];
+        let grabbedProt = ele["food"]["nutrients"]["PROCNT"];
+        let grabbedFat = ele["food"]["nutrients"]["FAT"];
 
         grabbedCal = (grabbedCal/100) * parseInt(allServings[idx]);
         grabbedCarb = (grabbedCarb/100) * parseInt(allServings[idx]);
@@ -354,20 +229,12 @@ function parseServings(myChart){
         fats += grabbedFat;
         protein += grabbedProt;
         calories +=grabbedCal
-
-        myChart["data"]["datasets"]["0"]["label"] = `Total Calories: ${calories}`
-        myChart["data"]["datasets"]["0"]["data"] = [carbs, fats, protein];
-  
-        myChart.update(); 
       })
-  })
 
-  // console.log("these are my carbs")
-  // console.log(carbs)
-
-  // myChart["data"]["datasets"]["0"]["label"] = `Total Calories: ${calories}`
-  // myChart["data"]["datasets"]["0"]["data"] = [carbs, fats, protein];
-  
-  // myChart.update(); 
+      myChart["data"]["datasets"]["0"]["label"] = `Total Calories: ${calories}`
+      myChart["data"]["datasets"]["0"]["data"] = [carbs, fats, protein];
+      myChart.update(); 
+    })
 
 }
+

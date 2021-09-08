@@ -72,7 +72,13 @@ nav{
 #foods-container{
   /* height: 1000px;
   overflow: scroll; */
-  background-color: #B4A0E5;
+  /* background-color: #B4A0E5; */
+  /* background-color: #D0DDD7; */
+  background-color: black;
+  margin:5%;
+  margin-left:7%;
+  border-radius: 20px;
+
 }
 #foods-header{
   display: flex;
@@ -81,10 +87,12 @@ nav{
 }
 
 #foods-items{
-  height: 1000px;
-  overflow: scroll;
+  height: 1100px;
+  /* overflow: scroll; */
+  /* overflow: hidden; */
   /* display:flex; */
   /* justify-content: center; */
+  overflow-y: hidden;
 }
 #foods-lists{
   display:grid;
@@ -156,9 +164,14 @@ nav{
   \******************************************************************************************************/
 
 #bento-UI{
-  background-color: #D5E2BC;
+  /* background-color: #D5E2BC; */
+  /* background-color: #D0DDD7; */
+  background-color: black;
   display:grid;
   grid-template-rows: 20px 1fr;
+  border-radius: 20px;
+  margin:2%
+
 }
 #bento-header{
   display: flex;
@@ -260,20 +273,27 @@ ul{
   grid-template-columns: 1fr 3fr;
 }
 
-#nutr-left-side{
-  background-color: grey;
-}
-
 #nutr-right-side{
   /* background-color: #306B34; */
-  background-color: whitesmoke;
-  width: 100%;
+  background-color: black;
+  width: 500px;
   height: 1000px;
+  margin:5%;
+  border-radius: 20px;
 }
 
 #chart-container{
   width: 400px;
   height: auto;
+}
+
+#serving-size{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#serving-size >input{
+  width: 120px;
 }
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/overallStyles.css ***!
@@ -302,8 +322,14 @@ h1 ,#foods-header{
   \*****************************************************************************************************************************************/
 #site-container {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 2fr 4fr 2fr;
   height: 1000px;
+}
+
+body {
+  background-image: url("../dist/images/otherImages/woodBackground.jpeg");
+  background-position: center;
+  background-size: cover;
 }
 
 @media only screen and (max-width: 600px) {
