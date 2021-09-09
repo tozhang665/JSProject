@@ -1,14 +1,16 @@
-@import url("./styles/reset.css");
+@import url("styles/reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
-@import url("./styles/nav.css");
-@import url("./styles/foodSelection.css");
-@import url("./styles/bentoUI.css");
-@import url("./styles/nutrition.css");
-@import url("./styles/overallStyles.css");
+@import url("styles/nav.css");
+@import url("styles/foodSelection.css");
+@import url("styles/bentoUI.css");
+@import url("styles/nutrition.css");
+@import url("styles/overallStyles.css");
+@import url("styles/footer.css");
+@import url("styles/leftCont.css");
 
 #site-container{
   display: grid;
-  grid-template-columns: 2fr 4fr 2fr;
+  grid-template-columns: 5fr 2fr;
   height: 1000px;
 }
 

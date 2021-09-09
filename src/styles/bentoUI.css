@@ -1,7 +1,9 @@
 #bento-UI{
   background-color: #336199;
   height: 50%;
-  border-radius: 20px;
+  /* border-radius: 20px; */
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   margin-top:10%;
   /* margin-bottom: 10%; */
   width: 1100px;

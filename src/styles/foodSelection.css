@@ -1,9 +1,14 @@
+
 button{
-  background-color: turquoise; 
-  border: none;
-  border-radius: 5px;
-  color: #333;/* Dark grey */ 
+  background-color: #EBF6FF; 
+  border: 1px #B8B8B8 solid;
+  border-radius: 10px;
+  color: #333;
+  /* color:rgba(79, 10, 10, 0.475) */
   padding: 5px 10px
+}
+button:hover{
+  opacity: .7;
 }
 
 input[type=text]{
@@ -12,17 +17,21 @@ input[type=text]{
   border-radius: 5px;
 }
 #foods-container{
-  background-color: #B8B8B8;
+  /* background-color: #B8B8B8; */
+  background-color: #336199;
   /* margin:5%; */
   margin-left:45%;
   margin-top:20%;
-  border-radius: 20px;
+  /* border-radius: 20px; */
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   height:50%;
   /* display:absolute; */
+  /* border-right: 1px solid grey; */
 }
 #searchTerms{
-  margin-top: 15px;
-  margin-left: 30px;
+  margin-top: 1%;
+  margin-left: 20%;
   margin-bottom: 15px;
 }
 
@@ -33,12 +42,13 @@ input[type=text]{
 }
 
 #foods-items{
-  height: 1100px;
-  /* overflow: scroll; */
+  height: 80%;
+  overflow: scroll;
   /* overflow: hidden; */
   /* display:flex; */
   /* justify-content: center; */
   overflow-y: hidden;
+  padding-left: 18%;
 }
 #foods-lists{
   display:grid;

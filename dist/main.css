@@ -68,12 +68,17 @@ nav{
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/foodSelection.css ***!
   \************************************************************************************************************/
+
 button{
-  background-color: turquoise; 
-  border: none;
-  border-radius: 5px;
-  color: #333;/* Dark grey */ 
+  background-color: #EBF6FF; 
+  border: 1px #B8B8B8 solid;
+  border-radius: 10px;
+  color: #333;
+  /* color:rgba(79, 10, 10, 0.475) */
   padding: 5px 10px
+}
+button:hover{
+  opacity: .7;
 }
 
 input[type=text]{
@@ -82,17 +87,21 @@ input[type=text]{
   border-radius: 5px;
 }
 #foods-container{
-  background-color: #B8B8B8;
+  /* background-color: #B8B8B8; */
+  background-color: #336199;
   /* margin:5%; */
   margin-left:45%;
   margin-top:20%;
-  border-radius: 20px;
+  /* border-radius: 20px; */
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   height:50%;
   /* display:absolute; */
+  /* border-right: 1px solid grey; */
 }
 #searchTerms{
-  margin-top: 15px;
-  margin-left: 30px;
+  margin-top: 1%;
+  margin-left: 20%;
   margin-bottom: 15px;
 }
 
@@ -103,12 +112,13 @@ input[type=text]{
 }
 
 #foods-items{
-  height: 1100px;
-  /* overflow: scroll; */
+  height: 80%;
+  overflow: scroll;
   /* overflow: hidden; */
   /* display:flex; */
   /* justify-content: center; */
   overflow-y: hidden;
+  padding-left: 18%;
 }
 #foods-lists{
   display:grid;
@@ -171,7 +181,9 @@ p{
 #bento-UI{
   background-color: #336199;
   height: 50%;
-  border-radius: 20px;
+  /* border-radius: 20px; */
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   margin-top:10%;
   /* margin-bottom: 10%; */
   width: 1100px;
@@ -346,12 +358,27 @@ h1 ,#foods-header{
 
 
 
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/footer.css ***!
+  \*****************************************************************************************************/
+#main-footer{
+  background-color: grey;
+  height: 30px;
+  width: 100%;
+}
+/*!*******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/leftCont.css ***!
+  \*******************************************************************************************************/
+#left-container{
+  display:grid;
+  grid-template-columns: 2fr 5fr;
+}
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (1) ***!
   \*****************************************************************************************************************************************/
 #site-container {
   display: grid;
-  grid-template-columns: 2fr 4fr 2fr;
+  grid-template-columns: 5fr 2fr;
   height: 1000px;
 }
 

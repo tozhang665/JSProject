@@ -30,77 +30,96 @@
   <div id = "site-container">
 
 
-
-    <div id = "foods-container">
-      <div id="searchTerms">
-        <input type="text" id="food-input">
-        <button onclick="addItem()">Add Item</button>
-      </div>
-      <div id="foods-header">
-        All Foods
-      </div>
-      <div id = "foods-items" >
-        <ul id = "foods-lists" class = "container foods-list">
-          <li class="draggable" draggable="true"><h1 class="food" id="rice"></h1><p>rice</p></li>       
-          <li class="draggable" draggable="true"><h1 class="food" id="hotdog" ></h1><p>hot dog</p></li>
-          <li class="draggable" draggable="true"><h1 class="food" id="chicken"></h1><p> chicken</p></li>
-          <li class="draggable" draggable="true"><h1 class="food" id="lettuce"></h1><p>lettuce</p></li>
-          <li class="draggable" draggable="true"><h1 class="food" id="eggs"></h1><p>eggs</p></li>
-        </ul>
-      </div>
+<div id="left-container">
+    <div id="foods-container">
+  <div id="searchTerms">
+    <input type="text" id="food-input">
+    <button onclick="addItem()">Add Item</button>
+  </div>
+  <div id="foods-header">
+    All Foods
+  </div>
+  <div id="foods-items">
+    <ul id="foods-lists" class="container foods-list">
+      <li class="draggable" draggable="true">
+        <h1 class="food" id="rice"></h1>
+        <p>rice</p>
+      </li>
+      <li class="draggable" draggable="true">
+        <h1 class="food" id="hotdog"></h1>
+        <p>hot dog</p>
+      </li>
+      <li class="draggable" draggable="true">
+        <h1 class="food" id="chicken"></h1>
+        <p> chicken</p>
+      </li>
+      <li class="draggable" draggable="true">
+        <h1 class="food" id="lettuce"></h1>
+        <p>lettuce</p>
+      </li>
+      <li class="draggable" draggable="true">
+        <h1 class="food" id="eggs"></h1>
+        <p>eggs</p>
+      </li>
+    </ul>
+  </div>
 
     </div>
+      <div id="bento-UI">
 
-    <div id = "bento-UI">
+  <div id="lunchbox-bento">
 
-      <div id ="lunchbox-bento">
-        
-        <div id = "bento-box">
+    <div id="bento-box">
 
-          <div id = "bento-box-inner">
-            <div id = "leftSide-main">
-              <div id="lSide-1">
-                <ul id="leftSide-1" class="container">
+      <div id="bento-box-inner">
+        <div id="leftSide-main">
+          <div id="lSide-1">
+            <ul id="leftSide-1" class="container">
 
-                </ul>
-              </div>
-              <div id="lSide-2">
-                <ul id="leftSide-2" class="container">
-
-                </ul>
-              </div>
-            </div>
-
-            <div id= "rightside-main">
-              <div id="rSide-1">
-                <ul id="rightSide-1" class="container">
-              
-                </ul>
-              </div>
-              <div id="rSide-2">
-                <ul id="rightSide-2" class="container">
-                
-                </ul>
-              </div>
-              <div id="rSide-3">
-                <ul id="rightSide-3" class="container">
-
-                </ul>
-              </div>
-              <div id="rSide-4">
-                <ul id="rightSide-4" class="container">
-
-                </ul>
-              </div>
-            </div>
-
+            </ul>
           </div>
+          <div id="lSide-2">
+            <ul id="leftSide-2" class="container">
 
-
+            </ul>
+          </div>
         </div>
+
+        <div id="rightside-main">
+          <div id="rSide-1">
+            <ul id="rightSide-1" class="container">
+
+            </ul>
+          </div>
+          <div id="rSide-2">
+            <ul id="rightSide-2" class="container">
+
+            </ul>
+          </div>
+          <div id="rSide-3">
+            <ul id="rightSide-3" class="container">
+
+            </ul>
+          </div>
+          <div id="rSide-4">
+            <ul id="rightSide-4" class="container">
+
+            </ul>
+          </div>
+        </div>
+
       </div>
 
+
     </div>
+  </div>
+
+      </div>
+</div>
+
+
+
+
 
     <div id="nutr-right-side">
       <div id="chart-center">
@@ -142,7 +161,7 @@
     labels: labels,
     datasets: [{
       label: `Total Calories: 0`,
-      backgroundColor: 'rgb(255, 99, 132)',
+      backgroundColor: ['rgb(109,89,122)','rgb(39,124,92)','rgb(234,172,139)'],
       borderColor: 'rgb(255, 99, 132)',
       data: [15,30,10]
     }]
@@ -166,6 +185,12 @@
   // },1000);
 
   </script>
+
+
+
+<footer id="main-footer">
+
+</footer>
 
 </body>
 </html>
