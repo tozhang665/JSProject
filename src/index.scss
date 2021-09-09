@@ -21,7 +21,10 @@ body{
 
   // background-size: 1920px 1080px;
 
-  background-image: url("../dist/images/otherImages/jBackground.eps");
+  // background-image: url("../dist/images/otherImages/jBackground.jpeg");
+  background-image: linear-gradient(to bottom,  rgb(117,158,209,.6) 100%, rgb(117,158,209,.6) 100%), url("../dist/images/otherImages/jBackground.jpeg");
+  background-size: 20%;
+  
   color:#171717;
 }
 

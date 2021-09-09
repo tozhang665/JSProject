@@ -12,13 +12,9 @@ input[type=text]{
   border-radius: 5px;
 }
 #foods-container{
-  /* height: 1000px;
-  overflow: scroll; */
-  /* background-color: #B4A0E5; */
-  /* background-color: #9893DA; */
-  background-color: #0F4C75;
-  margin:5%;
-  margin-left:5%;
+  background-color: #B8B8B8;
+  /* margin:5%; */
+  margin-left:45%;
   margin-top:20%;
   border-radius: 20px;
   height:50%;

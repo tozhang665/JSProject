@@ -82,13 +82,9 @@ input[type=text]{
   border-radius: 5px;
 }
 #foods-container{
-  /* height: 1000px;
-  overflow: scroll; */
-  /* background-color: #B4A0E5; */
-  /* background-color: #9893DA; */
-  background-color: #0F4C75;
-  margin:5%;
-  margin-left:5%;
+  background-color: #B8B8B8;
+  /* margin:5%; */
+  margin-left:45%;
   margin-top:20%;
   border-radius: 20px;
   height:50%;
@@ -172,11 +168,8 @@ p{
 /*!******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/bentoUI.css ***!
   \******************************************************************************************************/
-
 #bento-UI{
-  /* background-color: #D5E2BC; */
-  /* background-color: #BBE1FA; */
-  background-color: black;
+  background-color: #336199;
   height: 50%;
   border-radius: 20px;
   margin-top:10%;
@@ -223,12 +216,12 @@ p{
   display:flex;
   justify-content: center;
   align-items: center;
-  background-color: violet;
+  background-color: #336199;
 }
 
 #bento-box-inner{
   /* background-image: url("../../dist/images/otherImages/bentobox.png"); */
-  border: 5px solid black;
+  /* border: 5px solid black; */
   height: 81%;
   width: 84%;
   display: grid;
@@ -293,7 +286,7 @@ p{
   background-color: #C9D6DF;
   width: 500px;
   height: 700px;
-  margin:5%;
+  /* margin:5%; */
   margin-top: 20%;
   border-radius: 20px;
 }
@@ -363,7 +356,8 @@ h1 ,#foods-header{
 }
 
 body {
-  background-image: url("../dist/images/otherImages/jBackground.eps");
+  background-image: linear-gradient(to bottom, rgba(117, 158, 209, 0.6) 100%, rgba(117, 158, 209, 0.6) 100%), url("../dist/images/otherImages/jBackground.jpeg");
+  background-size: 20%;
   color: #171717;
 }
 

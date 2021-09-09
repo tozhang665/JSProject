@@ -1,8 +1,5 @@
-
 #bento-UI{
-  /* background-color: #D5E2BC; */
-  /* background-color: #BBE1FA; */
-  background-color: black;
+  background-color: #336199;
   height: 50%;
   border-radius: 20px;
   margin-top:10%;
@@ -49,12 +46,12 @@
   display:flex;
   justify-content: center;
   align-items: center;
-  background-color: violet;
+  background-color: #336199;
 }
 
 #bento-box-inner{
   /* background-image: url("../../dist/images/otherImages/bentobox.png"); */
-  border: 5px solid black;
+  /* border: 5px solid black; */
   height: 81%;
   width: 84%;
   display: grid;
