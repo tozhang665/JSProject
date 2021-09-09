@@ -134,7 +134,7 @@ p{
   background-image: url("./dist/food/StockPics/cannedFood.png");
 }
 #rice{
-  background-image: url("./dist/food/onigilly.png");
+  background-image: url("../dist/food/onigilly.png");
 }
 
 #eggs{
