@@ -449,7 +449,7 @@ h1 ,#foods-header{
 }
 
 body {
-  background-image: linear-gradient(to bottom, rgba(117, 158, 209, 0.6) 100%, rgba(117, 158, 209, 0.6) 100%), url("dist/images/otherImages/jBackground.jpeg");
+  background-image: linear-gradient(to bottom, rgba(117, 158, 209, 0.6) 100%, rgba(117, 158, 209, 0.6) 100%), url("./dist/images/otherImages/jBackground.jpeg");
   background-size: 700px 700px;
   color: #171717;
 }
