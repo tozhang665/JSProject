@@ -435,7 +435,7 @@ h1 ,#foods-header{
   align-items: center;
 }
 
-#main-footer >div> a>img{
+#githubLogo{
   height: 50px;
   width: 50px;
   filter: brightness(0) invert(1);
@@ -448,6 +448,13 @@ h1 ,#foods-header{
   text-align: center;
   color:white;
 }
+
+#linkedInLogo{
+  height: 50px;
+  width: 60px;
+  filter: brightness(0) invert(1);
+}
+
 /*!*******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/leftCont.css ***!
   \*******************************************************************************************************/

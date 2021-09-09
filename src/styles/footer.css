@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-#main-footer >div> a>img{
+#githubLogo{
   height: 50px;
   width: 50px;
   filter: brightness(0) invert(1);
@@ -27,4 +27,10 @@
   font-size: 17px;
   text-align: center;
   color:white;
+}
+
+#linkedInLogo{
+  height: 50px;
+  width: 60px;
+  filter: brightness(0) invert(1);
 }
