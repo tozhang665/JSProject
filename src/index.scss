@@ -9,33 +9,26 @@
 @import url("styles/leftCont.css");
 
 #site-container{
+  margin-top: 5%;
   display: grid;
   grid-template-columns: 5fr 2fr;
   height: 1000px;
 }
 
 body{
-  // background-image: url("../dist/images/otherImages/background.jpg");
-  // background-image: url("../dist/images/otherImages/ryokan.jpeg");
-  // background-color: #1B262C;
-  // background-position: center;
-  // background-size: cover;
 
-  // background-size: 1920px 1080px;
-
-  // background-image: url("../dist/images/otherImages/jBackground.jpeg");
   background-image: linear-gradient(to bottom,  rgb(117,158,209,.6) 100%, rgb(117,158,209,.6) 100%), url("../dist/images/otherImages/jBackground.jpeg");
-  background-size: 20%;
+  background-size: 700px 700px;
   
   color:#171717;
 }
 
 
-@media only screen and (max-width: 1400px){
+@media only screen and (max-width: 1500px){
 	/*Big smartphones [426px -> 600px]*/
-  #foods-lists{
-    display: grid;
-    grid-template-columns: 1fr;
-    width:10%;
-  }
+  // #foods-lists{
+  //   display: grid;
+  //   grid-template-columns: 1fr;
+  //   width:10%;
+  // }
 }

@@ -10,8 +10,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./dist/main.css">
-  <link rel="shortcut icon" href="./dist/images/otherImages/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="dist/main.css">
+  <link rel="shortcut icon" href="dist/images/otherImages/favicon/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -22,15 +25,16 @@
 <body>
   <nav>
     <h1 id = "title">
-      <!-- <img src="https://fontmeme.com/permalink/210908/358cb90cfe8ca86bd913599a69de8207.png" alt="fruit-ninja-font"> -->
-      <img src="https://fontmeme.com/permalink/210909/cd0304168f5a80d3cccd7f8af880b39c.png" alt="fruit-ninja-font">
+      
+      <img src="dist/images/otherImages/title.png" alt="fruit-ninja-font">
     </h1>
   </nav>
 
-  <div id = "site-container">
+<div id = "site-container">
 
 
-<div id="left-container">
+  <div id="left-container">
+
     <div id="foods-container">
   <div id="searchTerms">
     <input type="text" id="food-input">
@@ -65,57 +69,58 @@
   </div>
 
     </div>
-      <div id="bento-UI">
 
-  <div id="lunchbox-bento">
+    <div id="bento-UI">
 
-    <div id="bento-box">
+      <div id="lunchbox-bento">
 
-      <div id="bento-box-inner">
-        <div id="leftSide-main">
-          <div id="lSide-1">
-            <ul id="leftSide-1" class="container">
+        <div id="bento-box">
 
-            </ul>
+          <div id="bento-box-inner">
+            <div id="leftSide-main">
+              <div id="lSide-1">
+                <ul id="leftSide-1" class="container">
+
+                </ul>
+              </div>
+              <div id="lSide-2">
+                <ul id="leftSide-2" class="container">
+
+                </ul>
+              </div>
+            </div>
+
+            <div id="rightside-main">
+              <div id="rSide-1">
+                <ul id="rightSide-1" class="container">
+
+                </ul>
+              </div>
+              <div id="rSide-2">
+                <ul id="rightSide-2" class="container">
+
+                </ul>
+              </div>
+              <div id="rSide-3">
+                <ul id="rightSide-3" class="container">
+
+                </ul>
+              </div>
+              <div id="rSide-4">
+                <ul id="rightSide-4" class="container">
+
+                </ul>
+              </div>
+            </div>
+
           </div>
-          <div id="lSide-2">
-            <ul id="leftSide-2" class="container">
 
-            </ul>
-          </div>
+
         </div>
-
-        <div id="rightside-main">
-          <div id="rSide-1">
-            <ul id="rightSide-1" class="container">
-
-            </ul>
-          </div>
-          <div id="rSide-2">
-            <ul id="rightSide-2" class="container">
-
-            </ul>
-          </div>
-          <div id="rSide-3">
-            <ul id="rightSide-3" class="container">
-
-            </ul>
-          </div>
-          <div id="rSide-4">
-            <ul id="rightSide-4" class="container">
-
-            </ul>
-          </div>
-        </div>
-
       </div>
-
 
     </div>
   </div>
-
-      </div>
-</div>
 
 
 
@@ -127,15 +132,23 @@
           <canvas id="myCanvas"></canvas>
         </div>
       </div>
-      
+      <div id="switch-container">
+        <h3>Bar Graph  </h3>
+        <label class="switch">
+          <input type="checkbox" id="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <h3>  Pie Graph</h3>
+
+      </div>
       
       <div id="selected-container">
         <h1 id="nutrition-title">Selected Foods</h1>
       </div>
 
       <div id="nutrition-container">
-        <h2>Food Item</h2>
-        <h2>Amount in Grams</h2>
+        <div id="fItem">Food Item</div>
+        <div id="amtGrams">Amount in Grams</div>
         <div id="picked-foods">
           
         </div>
@@ -146,8 +159,6 @@
       
       
     </div>
-
-  
   </div>
 
   <script>
@@ -162,8 +173,8 @@
     datasets: [{
       label: `Total Calories: 0`,
       backgroundColor: ['rgb(109,89,122)','rgb(39,124,92)','rgb(234,172,139)'],
-      borderColor: 'rgb(255, 99, 132)',
-      data: [15,30,10]
+      borderColor: 'rgb(255, 255, 255)',
+      data: [0,0,0]
     }]
   };
 
@@ -178,18 +189,27 @@
     config
   );
 
-  // setInterval(function(){
-  //   updatePicked();
-  //   parseServings(myChart);
-  //   // console.log("GRABBED");
-  // },1000);
+  setInterval(function(){
+    updatePicked();
+    try{
+      parseServings(myChart);
+    }
+    catch{
+      console.log(" ")
+    }
+    parseServings(myChart);
+  },1000);
 
   </script>
 
 
 
 <footer id="main-footer">
-
+  <div id="footer-container">
+    <a href="https://www.linkedin.com/in/tonykzhang/"><img src="dist/images/otherImages/linkedinLogo.png" alt="linkedin logo"></a>
+    <a href=""><img src="dist/images/otherImages/GitHub-Mark-64px.png" alt=""></a>
+  </div>
+  <h1> Developed by Tony Zhang</h1>
 </footer>
 
 </body>

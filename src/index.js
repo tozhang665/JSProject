@@ -171,7 +171,7 @@ async function getFoodAsync(name)
 {
   const response = await fetch(`https://api.edamam.com/api/food-database/v2/parser?app_id=81004352&app_key=4525ccc584ab8228a8038d8fddfa8b28&ingr=${name}&nutrition-type=cooking`);
   if(!response.ok){
-    throw new Error('Network response was not ok');
+    throw new Error('There are no items in the LunchBox');
   }
   const data = await response.json()
   return data;
@@ -209,11 +209,13 @@ function parseServings(myChart){
   let strAllFoods = allFoods.join("%20")
 
 
+  // const baseURL=`https://api.edamam.com/api/food-database/v2/parser?app_id=81004352&app_key=4525ccc584ab8228a8038d8fddfa8b28&ingr=${strAllFoods}&nutrition-type=cooking`
+  // fetch(baseURL)
   getFoodAsync(strAllFoods)
     .then((data)=>{
       // console.log("FETCHING")
       let foodItems = data["parsed"];
-      console.log(data["parsed"])
+      // console.log(data["parsed"])
 
       foodItems.forEach((ele,idx)=>{
         let grabbedCal = ele["food"]["nutrients"]["ENERC_KCAL"];
@@ -239,3 +241,19 @@ function parseServings(myChart){
 
 }
 
+
+
+document.getElementById("checkbox").addEventListener("change", function(){
+	//This input has changed
+   console.log('This Value is', this.checked);
+   if(this.checked === true){
+    //  myChart["config"]["options"]["scales"]["yAxes"][0]["gridlines"]["drawBorder"]= false;
+     myChart["config"]["type"] = 'pie'
+     
+   }else{
+     myChart["config"]["type"] = 'bar'
+    //  myChart["config"]["options"]["scales"]["yAxes"][0]["gridlines"]["drawBorder"]= true;
+   }
+
+   myChart.update();
+});

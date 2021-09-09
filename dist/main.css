@@ -68,13 +68,11 @@ nav{
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/foodSelection.css ***!
   \************************************************************************************************************/
-
 button{
   background-color: #EBF6FF; 
   border: 1px #B8B8B8 solid;
   border-radius: 10px;
   color: #333;
-  /* color:rgba(79, 10, 10, 0.475) */
   padding: 5px 10px
 }
 button:hover{
@@ -82,26 +80,21 @@ button:hover{
 }
 
 input[type=text]{
-  width: 160px;
+  width: 150px;
   border: 2px black solid;
   border-radius: 5px;
 }
 #foods-container{
-  /* background-color: #B8B8B8; */
-  background-color: #336199;
-  /* margin:5%; */
-  margin-left:45%;
-  margin-top:20%;
-  /* border-radius: 20px; */
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  height:50%;
-  /* display:absolute; */
-  /* border-right: 1px solid grey; */
+  /* background-color: #336199; */
+  /* margin-left:45%; */
+  /* border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px; */
+  height:100%;
+  width: 300px;
 }
 #searchTerms{
   margin-top: 1%;
-  margin-left: 20%;
+  margin-left: 6%;
   margin-bottom: 15px;
 }
 
@@ -113,12 +106,12 @@ input[type=text]{
 
 #foods-items{
   height: 80%;
-  overflow: scroll;
+  overflow: hidden;
   /* overflow: hidden; */
   /* display:flex; */
   /* justify-content: center; */
-  overflow-y: hidden;
-  padding-left: 18%;
+  /* overflow-y: hidden; */
+  /* padding-left: 18%; */
 }
 #foods-lists{
   display:grid;
@@ -140,7 +133,7 @@ input[type=text]{
   background-position: center;
   /* background-size:450px 300px; */
   background-size: cover;
-  margin:5px;
+  margin:3px;
   /* border: 2px solid #E84545; */
   /* border-radius: 10px; */
 
@@ -150,6 +143,7 @@ p{
   font-size: larger;
   color:black;
   text-align: center;
+  margin-top:-40px;
 }
 
 .food{
@@ -179,12 +173,12 @@ p{
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/bentoUI.css ***!
   \******************************************************************************************************/
 #bento-UI{
-  background-color: #336199;
-  height: 50%;
+  /* background-color: #336199; */
+  height: 70%;
   /* border-radius: 20px; */
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  margin-top:10%;
+  /* border-top-right-radius: 20px; */
+  /* border-bottom-right-radius: 20px; */
+  /* margin-top:10%; */
   /* margin-bottom: 10%; */
   width: 1100px;
   display:flex;
@@ -228,7 +222,7 @@ p{
   display:flex;
   justify-content: center;
   align-items: center;
-  background-color: #336199;
+  /* background-color: #336199; */
 }
 
 #bento-box-inner{
@@ -299,8 +293,10 @@ p{
   width: 500px;
   height: 700px;
   /* margin:5%; */
-  margin-top: 20%;
+  /* margin-top: 5%; */
   border-radius: 20px;
+  margin-left:5%;
+  display:inline-block
 }
 
 #chart-center{
@@ -330,12 +326,98 @@ p{
   display:flex;
   justify-content: center;
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 body, #nutrition-title, #foods-header{
   font-family: 'Knewave',cursive;
 }
 
+
+#switch-container{
+  display:flex;
+  justify-content: end;
+  margin-right: 20px;
+}
+
+#switch-container > h3{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  margin-right: 7px;
+  margin-left: 7px;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+#fItem,#amtGrams{
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 5px;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+#picked-foods>h3{
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 5px;
+}
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/overallStyles.css ***!
   \************************************************************************************************************/
@@ -362,21 +444,52 @@ h1 ,#foods-header{
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/footer.css ***!
   \*****************************************************************************************************/
 #main-footer{
-  background-color: grey;
-  height: 30px;
+  background-color: #1B262C;
+  height: 120px;
   width: 100%;
+  /* display:absolute; */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  /* text-align: center; */
+}
+#footer-container{
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-footer >div> a>img{
+  height: 50px;
+  width: 50px;
+  filter: brightness(0) invert(1);
+}
+
+#main-footer>h1{
+  margin-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  text-align: center;
+  color:white;
 }
 /*!*******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/leftCont.css ***!
   \*******************************************************************************************************/
 #left-container{
   display:grid;
-  grid-template-columns: 2fr 5fr;
+  grid-template-columns: 3fr 7fr;
+  /* margin-top: 5%; */
+  height: 700px;
+  background-color: #336199;
+  margin-left:10%;
+  border-radius: 20px;
 }
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (1) ***!
   \*****************************************************************************************************************************************/
 #site-container {
+  margin-top: 5%;
   display: grid;
   grid-template-columns: 5fr 2fr;
   height: 1000px;
@@ -384,15 +497,10 @@ h1 ,#foods-header{
 
 body {
   background-image: linear-gradient(to bottom, rgba(117, 158, 209, 0.6) 100%, rgba(117, 158, 209, 0.6) 100%), url("../dist/images/otherImages/jBackground.jpeg");
-  background-size: 20%;
+  background-size: 700px 700px;
   color: #171717;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1500px) {
   /*Big smartphones [426px -> 600px]*/
-  #foods-lists {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 10%;
-  }
 }

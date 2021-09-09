@@ -1,10 +1,8 @@
-
 button{
   background-color: #EBF6FF; 
   border: 1px #B8B8B8 solid;
   border-radius: 10px;
   color: #333;
-  /* color:rgba(79, 10, 10, 0.475) */
   padding: 5px 10px
 }
 button:hover{
@@ -12,26 +10,21 @@ button:hover{
 }
 
 input[type=text]{
-  width: 160px;
+  width: 150px;
   border: 2px black solid;
   border-radius: 5px;
 }
 #foods-container{
-  /* background-color: #B8B8B8; */
-  background-color: #336199;
-  /* margin:5%; */
-  margin-left:45%;
-  margin-top:20%;
-  /* border-radius: 20px; */
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  height:50%;
-  /* display:absolute; */
-  /* border-right: 1px solid grey; */
+  /* background-color: #336199; */
+  /* margin-left:45%; */
+  /* border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px; */
+  height:100%;
+  width: 300px;
 }
 #searchTerms{
   margin-top: 1%;
-  margin-left: 20%;
+  margin-left: 6%;
   margin-bottom: 15px;
 }
 
@@ -43,12 +36,12 @@ input[type=text]{
 
 #foods-items{
   height: 80%;
-  overflow: scroll;
+  overflow: hidden;
   /* overflow: hidden; */
   /* display:flex; */
   /* justify-content: center; */
-  overflow-y: hidden;
-  padding-left: 18%;
+  /* overflow-y: hidden; */
+  /* padding-left: 18%; */
 }
 #foods-lists{
   display:grid;
@@ -70,7 +63,7 @@ input[type=text]{
   background-position: center;
   /* background-size:450px 300px; */
   background-size: cover;
-  margin:5px;
+  margin:3px;
   /* border: 2px solid #E84545; */
   /* border-radius: 10px; */
 
@@ -80,6 +73,7 @@ p{
   font-size: larger;
   color:black;
   text-align: center;
+  margin-top:-40px;
 }
 
 .food{

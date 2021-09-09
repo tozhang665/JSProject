@@ -1,10 +1,10 @@
 #bento-UI{
-  background-color: #336199;
-  height: 50%;
+  /* background-color: #336199; */
+  height: 70%;
   /* border-radius: 20px; */
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  margin-top:10%;
+  /* border-top-right-radius: 20px; */
+  /* border-bottom-right-radius: 20px; */
+  /* margin-top:10%; */
   /* margin-bottom: 10%; */
   width: 1100px;
   display:flex;
@@ -48,7 +48,7 @@
   display:flex;
   justify-content: center;
   align-items: center;
-  background-color: #336199;
+  /* background-color: #336199; */
 }
 
 #bento-box-inner{
