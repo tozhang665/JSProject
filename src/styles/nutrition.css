@@ -138,6 +138,11 @@ input:checked + .slider:before {
   margin-right: 15%;
 } */
 #calc-button{
-  margin-left: 15%;
+  margin-left: 5%;
+  background-color: #336199;
+  color:white
+}
+#calc-button:hover{
+  background-color: #24446B;
 }
 

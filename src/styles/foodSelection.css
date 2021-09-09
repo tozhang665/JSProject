@@ -5,7 +5,7 @@ button{
   color: #333;
   padding: 5px 10px
 }
-button:hover{
+#searchTerms>button:hover{
   opacity: .7;
 }
 
@@ -14,6 +14,7 @@ input[type=text]{
   border: 2px black solid;
   border-radius: 5px;
 }
+
 #foods-container{
   /* background-color: #336199; */
   /* margin-left:45%; */
