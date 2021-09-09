@@ -233,7 +233,7 @@ function parseServings(myChart){
         protein += grabbedProt;
         calories +=grabbedCal
       })
-
+      calories = calories.toFixed(0)
       myChart["data"]["datasets"]["0"]["label"] = `Total Calories: ${calories}`
       myChart["data"]["datasets"]["0"]["data"] = [carbs, fats, protein];
       myChart.update(); 
