@@ -137,10 +137,7 @@ input:checked + .slider:before {
 #calc-container{
   margin-right: 15%;
 } */
-/* #calc-button{
-  margin-right: 15%;
-} */
-
-#tester{
-  margin-left:15%
+#calc-button{
+  margin-left: 15%;
 }
+

@@ -1,7 +1,10 @@
 nav{
-  display:flex;
   background-color: #1B262C;
   height: 80px;
+  width: 100%;
+}
+
+#title-container{
   padding:10px;
   padding-left: 20px;
 }
