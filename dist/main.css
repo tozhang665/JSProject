@@ -53,14 +53,8 @@ table {
   \**************************************************************************************************/
 nav{
   display:flex;
-  /* justify-content: center;
-  align-items: center; */
-  /* background-color: #B4A0E5; */
   background-color: #1B262C;
-  /* background-color: #DA0037; */
   height: 80px;
-  /* border-bottom: 1px solid #D5E2BC; */
-  /* color: whitesmoke; */
   padding:10px;
   padding-left: 20px;
 }
@@ -107,11 +101,7 @@ input[type=text]{
 #foods-items{
   height: 80%;
   overflow: hidden;
-  /* overflow: hidden; */
-  /* display:flex; */
-  /* justify-content: center; */
-  /* overflow-y: hidden; */
-  /* padding-left: 18%; */
+
 }
 #foods-lists{
   display:grid;
@@ -126,17 +116,11 @@ input[type=text]{
 }
 
 #foods-lists >li> .food{
-  /* height: 450px;
-  width: 300px; */
   height:150px;
   width: 150px;
   background-position: center;
-  /* background-size:450px 300px; */
   background-size: cover;
   margin:3px;
-  /* border: 2px solid #E84545; */
-  /* border-radius: 10px; */
-
 }
 p{
   font-weight:700;
@@ -147,10 +131,10 @@ p{
 }
 
 .food{
-  background-image: url("../../dist/food/StockPics/cannedFood.png");
+  background-image: url("dist/food/StockPics/cannedFood.png");
 }
 #rice{
-  background-image: url("../../dist/food/onigilly.png");
+  background-image: url("dist/food/onigilly.png");
 }
 
 #eggs{
@@ -158,28 +142,20 @@ p{
 }
 
 #hotdog{
-  background-image: url("../../dist/food/hotdog.png");
+  background-image: url("dist/food/hotdog.png");
 }
 #chicken{
-  background-image: url("../../dist/food/chicken.png");
+  background-image: url("dist/food/chicken.png");
 }
 #lettuce{
-  background-image: url("../../dist/food/veggies.png");
+  background-image: url("dist/food/veggies.png");
 }
-/* #generic{
-  background-image: url("../../dist/food/generic.png");
-} */
+
 /*!******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/bentoUI.css ***!
   \******************************************************************************************************/
 #bento-UI{
-  /* background-color: #336199; */
   height: 70%;
-  /* border-radius: 20px; */
-  /* border-top-right-radius: 20px; */
-  /* border-bottom-right-radius: 20px; */
-  /* margin-top:10%; */
-  /* margin-bottom: 10%; */
   width: 1100px;
   display:flex;
   justify-content: center;
@@ -209,40 +185,27 @@ p{
 
 
 #bento-box{
-  /* display: block; */
-  /* background-image: url("../../dist/images/readMe/basicWireFrame.jpeg"); */
-  background-image: url("../../dist/images/otherImages/bentobox.png");
+  background-image: url("dist/images/otherImages/bentobox.png");
   background-position: center;
   background-size:cover;
   width:800px;
   height:500px;
-  /* display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 1fr; */
+
   display:flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #336199; */
+
 }
 
 #bento-box-inner{
-  /* background-image: url("../../dist/images/otherImages/bentobox.png"); */
-  /* border: 5px solid black; */
   height: 81%;
   width: 84%;
   display: grid;
   grid-template-columns: 45fr 55fr;
 }
-/* 
-#leftSide-main{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-} */
-
 #lSide-1, #lSide-2{
   height: 50%;
-  background-image: url("../../dist/food/generic.png");
+  background-image: url("dist/food/generic.png");
   background-position: center;
   background-size:cover;
   overflow: hidden;
@@ -250,7 +213,7 @@ p{
 
 #rSide-1,#rSide-2,#rSide-3,#rSide-4{
   height: 100%;
-  background-image: url("../../dist/food/generic.png");
+  background-image: url("dist/food/generic.png");
   background-position: center;
   background-size:cover;
   overflow: hidden;
@@ -273,10 +236,6 @@ p{
   height:100%
 }
 
-/* ul{
-  height: 100%;
-} */
-
 /*!********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/nutrition.css ***!
   \********************************************************************************************************/
@@ -287,13 +246,9 @@ p{
 }
 
 #nutr-right-side{
-  /* background-color: #306B34; */
-  /* background-color: #625F63; */
   background-color: #C9D6DF;
   width: 500px;
   height: 700px;
-  /* margin:5%; */
-  /* margin-top: 5%; */
   border-radius: 20px;
   margin-left:5%;
   display:inline-block
@@ -422,7 +377,6 @@ input:checked + .slider:before {
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/overallStyles.css ***!
   \************************************************************************************************************/
 h1 ,#foods-header{
-  /* font-family: 'Roboto', sans-serif; */
   font-size: 25px;
 }
 
@@ -479,7 +433,6 @@ h1 ,#foods-header{
 #left-container{
   display:grid;
   grid-template-columns: 3fr 7fr;
-  /* margin-top: 5%; */
   height: 700px;
   background-color: #336199;
   margin-left:10%;
@@ -496,11 +449,7 @@ h1 ,#foods-header{
 }
 
 body {
-  background-image: linear-gradient(to bottom, rgba(117, 158, 209, 0.6) 100%, rgba(117, 158, 209, 0.6) 100%), url("../dist/images/otherImages/jBackground.jpeg");
+  background-image: linear-gradient(to bottom, rgba(117, 158, 209, 0.6) 100%, rgba(117, 158, 209, 0.6) 100%), url("dist/images/otherImages/jBackground.jpeg");
   background-size: 700px 700px;
   color: #171717;
-}
-
-@media only screen and (max-width: 1500px) {
-  /*Big smartphones [426px -> 600px]*/
 }

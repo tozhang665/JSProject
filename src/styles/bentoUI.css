@@ -1,11 +1,5 @@
 #bento-UI{
-  /* background-color: #336199; */
   height: 70%;
-  /* border-radius: 20px; */
-  /* border-top-right-radius: 20px; */
-  /* border-bottom-right-radius: 20px; */
-  /* margin-top:10%; */
-  /* margin-bottom: 10%; */
   width: 1100px;
   display:flex;
   justify-content: center;
@@ -35,40 +29,27 @@
 
 
 #bento-box{
-  /* display: block; */
-  /* background-image: url("../../dist/images/readMe/basicWireFrame.jpeg"); */
-  background-image: url("../../dist/images/otherImages/bentobox.png");
+  background-image: url("dist/images/otherImages/bentobox.png");
   background-position: center;
   background-size:cover;
   width:800px;
   height:500px;
-  /* display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 1fr; */
+
   display:flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #336199; */
+
 }
 
 #bento-box-inner{
-  /* background-image: url("../../dist/images/otherImages/bentobox.png"); */
-  /* border: 5px solid black; */
   height: 81%;
   width: 84%;
   display: grid;
   grid-template-columns: 45fr 55fr;
 }
-/* 
-#leftSide-main{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-} */
-
 #lSide-1, #lSide-2{
   height: 50%;
-  background-image: url("../../dist/food/generic.png");
+  background-image: url("dist/food/generic.png");
   background-position: center;
   background-size:cover;
   overflow: hidden;
@@ -76,7 +57,7 @@
 
 #rSide-1,#rSide-2,#rSide-3,#rSide-4{
   height: 100%;
-  background-image: url("../../dist/food/generic.png");
+  background-image: url("dist/food/generic.png");
   background-position: center;
   background-size:cover;
   overflow: hidden;
@@ -98,7 +79,3 @@
   align-items: center;
   height:100%
 }
-
-/* ul{
-  height: 100%;
-} */

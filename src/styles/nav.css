@@ -1,13 +1,7 @@
 nav{
   display:flex;
-  /* justify-content: center;
-  align-items: center; */
-  /* background-color: #B4A0E5; */
   background-color: #1B262C;
-  /* background-color: #DA0037; */
   height: 80px;
-  /* border-bottom: 1px solid #D5E2BC; */
-  /* color: whitesmoke; */
   padding:10px;
   padding-left: 20px;
 }

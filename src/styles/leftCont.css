@@ -1,7 +1,6 @@
 #left-container{
   display:grid;
   grid-template-columns: 3fr 7fr;
-  /* margin-top: 5%; */
   height: 700px;
   background-color: #336199;
   margin-left:10%;
