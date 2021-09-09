@@ -67,7 +67,7 @@ p{
 }
 
 .food{
-  background-image: url("./dist/food/StockPics/cannedFood.png");
+  background-image: url("../dist/food/StockPics/cannedFood.png");
 }
 #rice{
   background-image: url("../dist/food/onigilly.png");
@@ -78,11 +78,11 @@ p{
 }
 
 #hotdog{
-  background-image: url("./dist/food/hotdog.png");
+  background-image: url("../dist/food/hotdog.png");
 }
 #chicken{
-  background-image: url("./dist/food/chicken.png");
+  background-image: url("../dist/food/chicken.png");
 }
 #lettuce{
-  background-image: url("./dist/food/veggies.png");
+  background-image: url("../dist/food/veggies.png");
 }

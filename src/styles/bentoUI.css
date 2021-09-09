@@ -29,7 +29,7 @@
 
 
 #bento-box{
-  background-image: url("./dist/images/otherImages/bentobox.png");
+  background-image: url("../dist/images/otherImages/bentobox.png");
   background-position: center;
   background-size:cover;
   width:800px;
@@ -49,7 +49,7 @@
 }
 #lSide-1, #lSide-2{
   height: 50%;
-  background-image: url("./dist/food/generic.png");
+  background-image: url("../dist/food/generic.png");
   background-position: center;
   background-size:cover;
   overflow: hidden;
@@ -57,7 +57,7 @@
 
 #rSide-1,#rSide-2,#rSide-3,#rSide-4{
   height: 100%;
-  background-image: url("./dist/food/generic.png");
+  background-image: url("../dist/food/generic.png");
   background-position: center;
   background-size:cover;
   overflow: hidden;
