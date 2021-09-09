@@ -132,3 +132,15 @@ input:checked + .slider:before {
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 5px;
 }
+
+/* 
+#calc-container{
+  margin-right: 15%;
+} */
+/* #calc-button{
+  margin-right: 15%;
+} */
+
+#tester{
+  margin-left:15%
+}

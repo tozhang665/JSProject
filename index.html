@@ -133,14 +133,15 @@
         </div>
       </div>
       <div id="switch-container">
-        <h3>Bar Graph  </h3>
+        <h3 id="tester">Bar Graph  </h3>
         <label class="switch">
           <input type="checkbox" id="checkbox">
           <span class="slider round"></span>
         </label>
         <h3>  Pie Graph</h3>
-
       </div>
+
+      <button onclick="parseServings(myChart)"id="calc-button">Calculate Macros</button>
       
       <div id="selected-container">
         <h1 id="nutrition-title">Selected Foods</h1>
@@ -191,14 +192,7 @@
 
   setInterval(function(){
     updatePicked();
-    try{
-      parseServings(myChart);
-    }
-    catch{
-      console.log(" ")
-    }
-    parseServings(myChart);
-  },2000);
+  },500);
 
   </script>
 
