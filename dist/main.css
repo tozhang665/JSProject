@@ -53,28 +53,46 @@ table {
   \**************************************************************************************************/
 nav{
   display:flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   /* background-color: #B4A0E5; */
-  background-color: #364156;
-  height: 60px;
+  background-color: #1B262C;
+  /* background-color: #DA0037; */
+  height: 80px;
   /* border-bottom: 1px solid #D5E2BC; */
-  color: whitesmoke;
+  /* color: whitesmoke; */
+  padding:10px;
+  padding-left: 20px;
 }
 
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/foodSelection.css ***!
   \************************************************************************************************************/
+button{
+  background-color: turquoise; 
+  border: none;
+  border-radius: 5px;
+  color: #333;/* Dark grey */ 
+  padding: 5px 10px
+}
+
+input[type=text]{
+  width: 160px;
+  border: 2px black solid;
+  border-radius: 5px;
+}
 #foods-container{
   /* height: 1000px;
   overflow: scroll; */
   /* background-color: #B4A0E5; */
-  background-color: #9893DA;
-  /* background-color: black; */
+  /* background-color: #9893DA; */
+  background-color: #0F4C75;
   margin:5%;
-  margin-left:20%;
+  margin-left:5%;
+  margin-top:20%;
   border-radius: 20px;
-  
+  height:50%;
+  /* display:absolute; */
 }
 #searchTerms{
   margin-top: 15px;
@@ -111,14 +129,21 @@ nav{
 #foods-lists >li> .food{
   /* height: 450px;
   width: 300px; */
-  height:200px;
-  width: 200px;
+  height:150px;
+  width: 150px;
   background-position: center;
   /* background-size:450px 300px; */
   background-size: cover;
   margin:5px;
-  border: 2px solid black;
-  border-radius: 10px;
+  /* border: 2px solid #E84545; */
+  /* border-radius: 10px; */
+
+}
+p{
+  font-weight:700;
+  font-size: larger;
+  color:black;
+  text-align: center;
 }
 
 .food{
@@ -150,16 +175,16 @@ nav{
 
 #bento-UI{
   /* background-color: #D5E2BC; */
-  background-color: #9893DA;
-  /* background-color: black; */
+  /* background-color: #BBE1FA; */
+  background-color: black;
   height: 50%;
-  display:grid;
-  grid-template-rows: 20px 600px;
   border-radius: 20px;
-  margin:5%;
-  margin-top:20%;
-  margin-bottom: 10%;
+  margin-top:10%;
+  /* margin-bottom: 10%; */
   width: 1100px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 #bento-header{
   display: flex;
@@ -190,21 +215,22 @@ nav{
   background-image: url("../../dist/images/otherImages/bentobox.png");
   background-position: center;
   background-size:cover;
-  width:1000px;
-  height:1000px;
+  width:800px;
+  height:500px;
   /* display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr 1fr; */
   display:flex;
   justify-content: center;
   align-items: center;
+  background-color: violet;
 }
 
 #bento-box-inner{
   /* background-image: url("../../dist/images/otherImages/bentobox.png"); */
   border: 5px solid black;
-  height: 50%;
-  width: 85%;
+  height: 81%;
+  width: 84%;
   display: grid;
   grid-template-columns: 45fr 55fr;
 }
@@ -245,29 +271,30 @@ nav{
   display: flex;
   justify-content: center;
   align-items: center;
+  height:100%
 }
 
-
-
-ul{
+/* ul{
   height: 100%;
-}
+} */
 
 /*!********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/nutrition.css ***!
   \********************************************************************************************************/
 #nutrition-container{
+  margin-left:15px;
   display:grid;
   grid-template-columns: 1fr 3fr;
 }
 
 #nutr-right-side{
   /* background-color: #306B34; */
-  background-color: #625F63;
+  /* background-color: #625F63; */
+  background-color: #C9D6DF;
   width: 500px;
   height: 700px;
   margin:5%;
-  margin-top: 40%;
+  margin-top: 20%;
   border-radius: 20px;
 }
 
@@ -293,11 +320,22 @@ ul{
 #serving-size >input{
   width: 120px;
 }
+
+#selected-container{
+  display:flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+body, #nutrition-title, #foods-header{
+  font-family: 'Knewave',cursive;
+}
+
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/overallStyles.css ***!
   \************************************************************************************************************/
 h1 ,#foods-header{
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   font-size: 25px;
 }
 
@@ -325,11 +363,15 @@ h1 ,#foods-header{
 }
 
 body {
-  background-image: url("../dist/images/otherImages/ryokan.jpeg");
-  background-position: center;
-  background-size: cover;
+  background-image: url("../dist/images/otherImages/jBackground.eps");
+  color: #171717;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1400px) {
   /*Big smartphones [426px -> 600px]*/
+  #foods-lists {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 10%;
+  }
 }

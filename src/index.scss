@@ -14,12 +14,23 @@
 
 body{
   // background-image: url("../dist/images/otherImages/background.jpg");
-  background-image: url("../dist/images/otherImages/ryokan.jpeg");
-  background-position: center;
-  background-size: cover;
+  // background-image: url("../dist/images/otherImages/ryokan.jpeg");
+  // background-color: #1B262C;
+  // background-position: center;
+  // background-size: cover;
+
+  // background-size: 1920px 1080px;
+
+  background-image: url("../dist/images/otherImages/jBackground.eps");
+  color:#171717;
 }
 
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1400px){
 	/*Big smartphones [426px -> 600px]*/
+  #foods-lists{
+    display: grid;
+    grid-template-columns: 1fr;
+    width:10%;
+  }
 }

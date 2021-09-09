@@ -213,6 +213,7 @@ function parseServings(myChart){
     .then((data)=>{
       // console.log("FETCHING")
       let foodItems = data["parsed"];
+      console.log(data["parsed"])
 
       foodItems.forEach((ele,idx)=>{
         let grabbedCal = ele["food"]["nutrients"]["ENERC_KCAL"];

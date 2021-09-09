@@ -1,15 +1,17 @@
 #nutrition-container{
+  margin-left:15px;
   display:grid;
   grid-template-columns: 1fr 3fr;
 }
 
 #nutr-right-side{
   /* background-color: #306B34; */
-  background-color: #625F63;
+  /* background-color: #625F63; */
+  background-color: #C9D6DF;
   width: 500px;
   height: 700px;
   margin:5%;
-  margin-top: 40%;
+  margin-top: 20%;
   border-radius: 20px;
 }
 
@@ -34,4 +36,14 @@
 
 #serving-size >input{
   width: 120px;
+}
+
+#selected-container{
+  display:flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+body, #nutrition-title, #foods-header{
+  font-family: 'Knewave',cursive;
 }
