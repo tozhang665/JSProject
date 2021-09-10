@@ -1,7 +1,8 @@
 nav{
   background-color: #1B262C;
   height: 80px;
-  width: 100%;
+  display: block;
+  /* width: 100vw; */
 }
 
 #title-container{
