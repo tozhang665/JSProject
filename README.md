@@ -1,5 +1,8 @@
 # MPrep
 
+##live site
+[MyBentoPal](https://tozhang665.github.io/MyBentoPal/)
+
 ## Background & Overview
 
 - The purpose of my project is to create a simple interface that will help users plan out
