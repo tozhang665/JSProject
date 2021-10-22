@@ -1,6 +1,6 @@
 # MPrep
 ## Live Site
-[MyBentoPal](https://tozhang665.github.io/MyBentoPal/)
+# [MyBentoPal](https://tozhang665.github.io/MyBentoPal/)
 
 ## Background & Overview
 
