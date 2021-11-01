@@ -24,6 +24,48 @@ their meal preps.
 ![](MyBentoPal.png)
 
 
+
+## Implementation
+
+### Drag and Drop
+
+Drag and drop features is fairly simple but has proven to be its own challenge. it makes use of having using the "dragstart" , "dragging", and "dragend". 
+There is a event listener for all "draggable" elements and would add the class "dragging" if a element is being dragged. Afterwards, It would detect where the cursor will end up and will append the element as needed
+
+```javascript
+const draggables = document.querySelectorAll(".draggable")
+const containers = document.querySelectorAll(".container")
+
+draggables.forEach(draggable =>{
+  draggable.addEventListener('dragstart',()=>{
+    draggable.classList.add('dragging');
+  })
+
+  draggable.addEventListener('dragend',()=>{
+    draggable.classList.remove('dragging');
+  })
+
+})
+
+containers.forEach(container =>{
+  container.addEventListener('dragover',e=>{
+    e.preventDefault();
+    const afterElement = getDragAfterElement(container,e.clientY)
+    const draggable = document.querySelector(".dragging")
+    if(afterElement == null){
+      container.appendChild(draggable);
+    }else{
+      container.insertBefore(draggable,afterElement.element);
+    }
+
+  })
+
+})
+
+```
+
+
+
 ## Technologies
 1. HTML
 2. CSS
