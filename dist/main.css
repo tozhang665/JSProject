@@ -259,17 +259,26 @@ p{
 }
 
 
-#leftSide-1, #leftSide-2,#rightSide-1,#rightSide-2,#rightSide-3,#rightSide-4{
+#leftSide-1, #leftSide-2{
   /* display: flex;
   justify-content: center;
   align-items: center; */
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow: scroll;
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* height:20%; */
   /* overflow:scroll;
   scrollbar-color:black yellow; */
+}
+
+#rightSide-1,#rightSide-2,#rightSide-3,#rightSide-4{
+  height: 100%;
+  /* overflow: hidden; */
+  overflow: scroll;
+  display: grid;
+  grid-template-columns: 1fr ;
 }
 
 #foods-lists >li> .food{
