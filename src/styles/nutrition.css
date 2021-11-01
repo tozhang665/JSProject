@@ -6,7 +6,7 @@
 
 #nutr-right-side{
   background-color: #C9D6DF;
-  width: 500px;
+  width: 25vw;
   height: 700px;
   border-radius: 20px;
   margin-left:5%;
@@ -19,7 +19,8 @@
 }
 
 #chart-container{
-  width: 450px;
+  /* width: 450px; */
+  width: 90%;
   height: auto;
   background-color: white;
   margin-top:20px;

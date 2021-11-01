@@ -1,10 +1,13 @@
 #bento-UI{
   height: 70%;
-  width: 1100px;
+  /* width: 1100px; */
+  width: 100%;
   display:flex;
   justify-content: center;
   align-items: center;
+  min-width: 500px;
 }
+
 #bento-header{
   display: flex;
   justify-content: center;
@@ -41,6 +44,27 @@
 
 }
 
+@media screen and (max-width: 1600px) {
+  #bento-box{
+    width: 500px;
+    height: 300px;
+  }
+  #bento-box-inner{
+    height: 66%;
+    width: 84%;
+    display: grid;
+    grid-template-columns: 40fr 55fr;
+  }
+
+  .food{
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+
+
 #bento-box-inner{
   height: 81%;
   width: 84%;
@@ -53,6 +77,7 @@
   background-position: center;
   background-size:cover;
   overflow: hidden;
+  /* overflow: scroll; */
 }
 
 #rSide-1,#rSide-2,#rSide-3,#rSide-4{
@@ -74,10 +99,49 @@
 
 
 #leftSide-1, #leftSide-2,#rightSide-1,#rightSide-2,#rightSide-3,#rightSide-4{
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  height:100%;
+  align-items: center; */
+  height: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* height:20%; */
   /* overflow:scroll;
   scrollbar-color:black yellow; */
+}
+
+#foods-lists >li> .food{
+  height:150px;
+  width: 150px;
+  background-position: center;
+  background-size: cover;
+  margin:3px;
+}
+
+#leftSide-1> li > p{
+  visibility: hidden;
+  /* color: blue; */
+}
+
+#leftSide-2> li > p{
+  visibility: hidden;
+  /* color: blue; */
+}
+
+#rightSide-1> li > p{
+  visibility: hidden;
+  /* color: blue; */
+}
+#rightSide-2> li > p{
+  visibility: hidden;
+  /* color: blue; */
+}
+#rightSide-3> li > p{
+  visibility: hidden;
+  /* color: blue; */
+}
+#rightSide-4> li > p{
+  visibility: hidden;
+  /* color: blue; */
 }

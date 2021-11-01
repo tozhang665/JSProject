@@ -48,13 +48,13 @@ input[type=text]{
 .food{
   background-position: center;
   background-size: cover;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
 }
 
 #foods-lists >li> .food{
-  height:150px;
-  width: 150px;
+  height:175px;
+  width: 175px;
   background-position: center;
   background-size: cover;
   margin:3px;

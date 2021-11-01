@@ -37,7 +37,6 @@ function getDragAfterElement(container,y){
   return draggableElements.reduce((closest,child)=>{
     const box = child.getBoundingClientRect()
     const offset = y - box.top - box.height / 2
-    // console.log(offset);
     if(offset < 0 && offset > closest.offset){
       return {offset:offset,element:child}
     }else{
@@ -50,20 +49,19 @@ function getDragAfterElement(container,y){
 
 function grabDivFoods(elementID){
   var terms = [];
-  var children = [].slice.call(document.getElementById(elementID).getElementsByTagName('*'),0);
-
+  var children = [].slice.call(document.getElementById(elementID).getElementsByTagName('h1'),0);
   var elements = new Array(children.length);
   var arrayLength = children.length;
   for (var i = 0; i < arrayLength; i++) {
     var name = children[i].getAttribute("id");   
     elements[i]=name;
   }
-  
   elements.forEach((ele,idx)=>{
-    if(idx%2 ===1){
+    // if(idx%2 ===1){
       terms.push(ele)
-    }
+    // }
   })
+
   return terms;
 }
 function grabFoods(){
@@ -75,16 +73,13 @@ function grabFoods(){
   terms = terms.concat(grabDivFoods('rightSide-2'));
   terms = terms.concat(grabDivFoods('rightSide-3'));
   terms = terms.concat(grabDivFoods('rightSide-4'));
-  // console.log(terms)
+
   return terms.join("%20and%20");
 }
 
 
 function addItem(){
   let food = document.getElementById("food-input").value
-  console.log(food)
-
-
 
   let url = "https://api.edamam.com/api/food-database/v2/parser?app_id=81004352&app_key=4525ccc584ab8228a8038d8fddfa8b28&ingr="
   url = url+ food + "&nutrition-type=cooking"
@@ -101,11 +96,9 @@ function addItem(){
       newFood.setAttribute("class","draggable");
       newFood.setAttribute("draggable","true");
       newFood.innerHTML=`<h1 class="food" id="${food}"></h1><p>${food}</p>`;
-      // newFood.style.backgroundimage="url('../../dist/food/StockPics/cannedFood.png')"
-      console.log(newFood);
+
       cont.insertBefore(newFood,cont.firstChild)
-      // cont.appendChild(newFood);
-      console.log(cont);
+
       newFood.addEventListener('dragstart',()=>{
         newFood.classList.add('dragging');
       })
@@ -122,17 +115,14 @@ function cap(word){
 
 function updatePicked(){
   let terms = grabFoods().split("%20and%20");
-  // console.log(terms)
+
   for(let i = 0; i < terms.length;i++){
     terms[i] = cap(terms[i]);
   }
-  // console.log(terms)
+
   let list = document.getElementById("picked-foods");
   let servings = document.getElementById("serving-size");
-  // console.log(list);
-  // console.log(list.innerText.indexOf("Rice"))
-  // console.log(list.innerText.indexOf("Hotdog"))
-  // console.log(list.innerText.indexOf("chicken"))
+
   terms.forEach((ele)=>{
     if(!(list.innerText.indexOf(ele)>=0)){
       let food = document.createElement("h3");
@@ -244,8 +234,7 @@ function parseServings(myChart){
 
 
 document.getElementById("checkbox").addEventListener("change", function(){
-	//This input has changed
-   console.log('This Value is', this.checked);
+
    if(this.checked === true){
     //  myChart["config"]["options"]["scales"]["yAxes"][0]["gridlines"]["drawBorder"]= false;
      myChart["config"]["type"] = 'pie'
