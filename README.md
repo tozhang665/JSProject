@@ -1,6 +1,6 @@
 # MPrep
 ## Live Site
-[MyBentoPal](https://tozhang665.github.io/MyBentoPal/)
+# [MyBentoPal](https://tozhang665.github.io/MyBentoPal/)
 
 ## Background & Overview
 
@@ -20,15 +20,8 @@ their meal preps.
 2. I currently have planned 5 different food items with pictures while I plan on using a lot more food items with default pictures. 
     - This is due to time constraints and creating drawings for every single food item will be out of scope.
 3. Everytime the user adds a item into my lunchbox, my website will show the macros(carb, protein, fats, total calories) on the side so it will let the user know the vital nutrition facts on the lunchbox they are making. 
-## Wireframes
-![](dist/images/readMe/wireframe.png)
-
-url:https://wireframe.cc/89414H
-
-
-
-![](dist/images/readMe/basicWireFrame.jpeg)
-
+## Page Layout
+![](MyBentoPal.png)
 
 
 ## Technologies
@@ -39,5 +32,10 @@ url:https://wireframe.cc/89414H
 5. Edamam API - https://developer.edamam.com/edamam-docs-nutrition-api
 6. RapidApi - https://rapidapi.com/spoonacular/api/recipe-food-nutrition/
 ## Implementation Timeline
-![](dist/images/readMe/ganttChart.png)
+
+* Friday: Start base layout with minimal CSS and flexbox. Start drag and drop features.
+* Monday: Finish Drag and drop as well as start designing and implementing graph with being able to add food items.
+* Tuesday: finish implementation of graph as well as API calls to nutrition database.
+* Wednesday: Final CSS fixes and implementation and stress test features.
+* Thursday: bug fixes and finalize product.
 
