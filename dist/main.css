@@ -116,17 +116,18 @@ input[type=text]{
 .food{
   background-position: center;
   background-size: cover;
-  height: 150px;
-  width: 150px;
+  height: 125px;
+  width: 125px;
 }
 
-#foods-lists >li> .food{
+/* #foods-lists >li> .food{
   height:175px;
   width: 175px;
   background-position: center;
   background-size: cover;
   margin:3px;
-}
+} */
+
 p{
   font-weight:700;
   font-size: larger;
@@ -218,8 +219,8 @@ p{
   }
 
   .food{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 }
 
